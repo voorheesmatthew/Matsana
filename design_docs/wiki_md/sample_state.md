@@ -55,7 +55,7 @@
       3: {
         id: 3,
         project_name: "Build Computer",
-        layout: "Grid",
+        layout: "Board",
         owner_id: 19,
         team_id: 7
       },
@@ -76,14 +76,14 @@
       12: {
         id: 12,
         project_name: "Make website",
-        layout: "Grid",
+        layout: "Board",
         owner_id: 33,
         team_id: 1
       },
       13: {
         id: 13,
         project_name: "Go to moon",
-        layout: "Grid",
+        layout: "Board",
         owner_id: NULL,
         team_id: 1
       }

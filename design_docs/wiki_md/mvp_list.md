@@ -9,7 +9,7 @@ Matsana, an Asana clone, is a web application that allows Teams to manage Projec
   * Users Project features
       * Users can view a grid of their Projects on **Home**
       * Users can create Projects in their team/workspace
-      * Users can decide on List or Grid layout (BONUS: privacy & templates)
+      * Users can decide on List or Board layout (BONUS: privacy & templates)
       * Users can assign other users to Projects
   * Adequate styling
   * Smooth, bug-free navigation
