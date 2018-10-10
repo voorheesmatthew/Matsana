@@ -1,13 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import configureStore from './store/store';
+import Root from './components/root';
+import { login } from './actions/session_actions'
 
 document.addEventListener('DOMContentLoaded',()=>{
-  const store = configureStore();
-  // we don't put the store directly on the window because
-  // it can be confusing when debugging, sometimes giving you access to state
-  // when you shouldn't
+  let store;
+  if (window.currentUser) {
+    const preloadedState = {
+      entities: {
+        users: { [window.currentUser.id]: window.currentUser }
+      },
+      session: { id: window.currentUser.id }
+    };
+    store = configureStore(preloadedState);
+    delete window.currentUser;
+  } else {
+    store = configureStore();
+  }
+  //Testing
   window.getState = store.getState;
-  window.dispatch = store.dispatch; // just for testing!
-  ReactDOM.render(<h1>Welcome to Matsana</h1>, document.getElementById('root'));
+  window.dispatch = store.dispatch;
+  window.login = login;
+  //Testing
+  const root = document.getElementById('root')
+  ReactDOM.render(<Root store={ store }/>, root);
 });

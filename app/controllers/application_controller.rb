@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
 
-  helper_method :current_user, :require_login
+  helper_method :current_user, :require_login, :logged_in?
 
   private
 
