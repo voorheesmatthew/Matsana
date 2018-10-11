@@ -98,12 +98,15 @@ class SessionForm extends React.Component {
                       />
                   </label>
                   <br/>
-                  <input
-                    id='login'
-                    className="session-submit"
-                    type="submit"
-                    value={this.props.formType}
-                    />
+                  <div
+                    className="session-submit-container">
+                    <input
+                      id='login'
+                      className="session-submit"
+                      type="submit"
+                      value={this.props.formType}
+                      />
+                  </div>
                 </div>
               </form>
             </div>
