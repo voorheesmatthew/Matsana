@@ -47,10 +47,14 @@ class SessionForm extends React.Component {
   render() {
 
     let guestButton;
+    let divider;
     if (this.props.formType === 'Log In') {
       guestButton = <button onClick={this.guestUserLogin} className="session-guest-button">
         Use Guest Account
       </button>
+      divider = <div className="session-login-seperator">
+        or
+      </div>
     }
     return (
       <div className="session-form-outer">
@@ -59,7 +63,7 @@ class SessionForm extends React.Component {
             <div className="session-form-elements">
               <h1 className="session-form-type">{this.props.formType}</h1>
               <div>{guestButton}</div>
-              <div className="session-login-seperator">or</div>
+              <div>{divider}</div>
               <form onSubmit={this.handleSubmit} className="session-form">
                 <div className="session-form-inputs">
 
