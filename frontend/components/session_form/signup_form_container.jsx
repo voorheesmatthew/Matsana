@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { signup } from '../../actions/session_actions';
+import { signup, clearErrors } from '../../actions/session_actions';
 import SessionForm from './session_form';
 
 const msp = ({ errors }) => {
@@ -14,11 +14,9 @@ const msp = ({ errors }) => {
 
 const mdp = dispatch => {
   return {
-    processForm: (user) => dispatch(signup(user))
+    processForm: (user) => dispatch(signup(user)),
+    clearErrors: () => dispatch(clearErrors())
   };
 };
 
 export default connect(msp, mdp)(SessionForm);
-
-// TODO: add:
-// Already have an account?

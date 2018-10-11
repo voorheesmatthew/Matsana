@@ -15,6 +15,10 @@ class SessionForm extends React.Component {
     this.guestUserLogin = this.guestUserLogin.bind(this);
   }
 
+  componentDidMount() {
+    this.props.clearErrors();
+  }
+
   update(field) {
     return e => this.setState({
       [field]: e.currentTarget.value
@@ -68,7 +72,7 @@ class SessionForm extends React.Component {
             <div className="session-form-elements">
               <h1 className="session-form-type">{this.props.formType}</h1>
               <div>{guestButton}</div>
-              <div>{divider}</div>
+              <div className="session-divider">{divider}</div>
               <form onSubmit={this.handleSubmit} className="session-form">
                 <div>{this.renderErrors()}</div>
                 <div className="session-form-inputs">

@@ -4,6 +4,7 @@
   background: linear-gradient(to top right, rgba(255,82,99,0.9) 10%, rgba(255,115,129,0.9) 65%, rgba(252,189,1,0.9) 125%);
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .session-switch a {
   text-decoration: none;
@@ -38,6 +39,7 @@
 .session-form-container {
   display: flex;
   justify-content: center;
+  align-items: center;
   background: transparent;
   width: 100%;
 }
@@ -64,6 +66,7 @@
   width: 400px;
   padding-bottom: 50px
 }
+
 .session-guest-button {
   color: white;
   border: 0;
@@ -76,10 +79,17 @@
   font-size: 13px;
 }
 
+.session-divider {
+  display: flex;
+  align-items: center;
+  width: 200%;
+}
+
 .session-login-seperator {
+  text-align: center;
   font-size: 24px;
   color: rgb(183, 191, 198);
-  width: 110%;
+  width: 100%;
 }
 .session-login-seperator::before {
   display: inline-block;
@@ -136,6 +146,7 @@
   padding: 0 0 0 10px;
   width: 100%;
   margin-top: 10px;
+  position: relative;
 }
 
 .session-submit-container {
@@ -167,5 +178,20 @@
 
 .session-errors-ul {
   list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+}
+
+.session-errors-ul li {
+  background-color: #fdedef;
+  display: flex;
+  flex-direction: column;
   text-align: center;
+  align-self: center;
+  font-size: 12px;
+  padding: 10px;
+  border-radius: 7px;
+  font-weight: bold;
 }
