@@ -37,7 +37,8 @@ class SessionForm extends React.Component {
     );
   }
 
-  guestUserLogin() {
+  guestUserLogin(e) {
+    e.preventDefault();
     this.setState({
       email: 'travis@veryrice.com',
       password: 'snwbrdng'

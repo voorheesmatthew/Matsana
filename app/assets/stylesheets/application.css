@@ -14,11 +14,11 @@
  *= require_self
  */
 
- body {
+ body, html {
    width: 100%;
    margin: 0px;
    font-family: Helvetica;
-   height: 100vh;
+   height: 100%;
  }
 
 

@@ -24,7 +24,8 @@ const TopBar = ({ currentUser, logout }) => {
     </hgroup>
   );
 
-  return currentUser ? inMatsanaBar() : welcomeBar();
+  // return currentUser ? inMatsanaBar() : welcomeBar();
+  return currentUser ? inMatsanaBar() : "";
 };
 
 

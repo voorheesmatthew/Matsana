@@ -2,6 +2,11 @@
   height: 100%;
   width: 100%;
   background: linear-gradient(to top right, rgba(255,82,99,0.9) 10%, rgba(255,115,129,0.9) 65%, rgba(252,189,1,0.9) 125%);
+  /* position: absolute;
+  top: 0; */
+  /* display: flex;
+  justify-content: center;
+  flex-direction: column; */
 }
 
 .session-form-container {
@@ -21,7 +26,6 @@
   margin-top: 50px;
   height: 565px;
   width: 585px;
-  /* margin-bottom: 50px; */
 }
 
 .session-form-elements {
