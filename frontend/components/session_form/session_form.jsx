@@ -1,5 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -60,9 +62,7 @@ class SessionForm extends React.Component {
     return (
       <div>
       <div className="session-outer">
-        <div className="session-header"> matsana
-
-        </div>
+        <div className="session-header"><Link to="/" className="session-header">matsana</Link></div>
         <div className="session-form-container">
           <div className="session-form-content">
             <div className="session-form-elements">

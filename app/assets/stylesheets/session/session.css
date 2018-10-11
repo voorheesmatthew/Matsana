@@ -17,9 +17,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 75px;
+  padding-top: 30px;
   color: white;
   font-size: 30px;
+}
+
+.session-header a {
+ text-decoration: none;
 }
 
 .session-footer {

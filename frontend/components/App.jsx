@@ -5,6 +5,7 @@ import { Route, Redirect, Switch, Link, HashRouter } from 'react-router-dom'
 import TopBarContainer from './top_bar/top_bar_container';
 import LoginFormContainer from './session_form/login_form_container';
 import SignupFormContainer from './session_form/signup_form_container';
+import SplashPage from './splash_page/splash_page';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => (
@@ -14,6 +15,7 @@ const App = () => (
     </header>
 
     <Switch>
+      <AuthRoute exact path="/" component={SplashPage}/>
       <AuthRoute exact path="/login" component={LoginFormContainer} />
       <AuthRoute exact path="/signup" component={SignupFormContainer} />
     </Switch>

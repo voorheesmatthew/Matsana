@@ -4,16 +4,7 @@ import { Link } from 'react-router-dom';
 
 
 const TopBar = ({ currentUser, logout }) => {
-  const welcomeBar = () => (
-    <hgroup welcome-="welcome-header-group">
-      <div className="welcome-top-bar">
-        <nav className="welcome-login-signup">
-          <Link to="/login" className="welcome-login">Login</Link>
-          <Link to="/signup" className="welcome-signup">Sign Up</Link>
-        </nav>
-      </div>
-    </hgroup>
-  );
+  
 
   const inMatsanaBar = () => (
     <hgroup className="top-header-group">
@@ -25,7 +16,7 @@ const TopBar = ({ currentUser, logout }) => {
   );
 
   // return currentUser ? inMatsanaBar() : welcomeBar();
-  return currentUser ? inMatsanaBar() : "";
+  return currentUser ? inMatsanaBar() : null;
 };
 
 

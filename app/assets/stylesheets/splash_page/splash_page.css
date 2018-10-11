@@ -1,0 +1,72 @@
+.splash-outer {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.splash-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+  margin-bottom: 70px;
+}
+
+.splash-header-logo {
+  font-size: 24px;
+}
+
+.splash-header-nav {
+  margin-top: 5px
+}
+
+
+.splash-header-nav a {
+  text-decoration: none;
+  color: black;
+  padding: 5px;
+}
+
+.splash-header-nav a:nth-child(2) {
+  text-decoration: none;
+  padding: 4px 15px;
+  color: #7031fd;
+  border: 2px solid #7031fd;
+  border-radius: 2px;
+  margin-left: 25px;
+}
+
+.splash-header-nav a:nth-child(2):hover {
+  color: white;
+  background-color: #7031fd;
+}
+
+.splash-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.splash-body-title {
+  font-size: 45px;
+  font-weight: 200;
+  width: 80%;
+}
+
+.splash-body-desc {
+  margin-top: 10px;
+  color: grey;
+  width: 80%;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.splash-footer {
+  position:absolute;
+  bottom:0;
+  text-align: center;
+  width:100%;
+  height:60px;
+}
