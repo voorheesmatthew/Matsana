@@ -18,11 +18,12 @@ document.addEventListener('DOMContentLoaded',()=>{
   } else {
     store = configureStore();
   }
-  //Testing
-  window.getState = store.getState;
-  window.dispatch = store.dispatch;
-  window.login = login;
-  //Testing
+  // //Testing
+  // window.getState = store.getState;
+  // window.dispatch = store.dispatch;
+  // window.login = login;
+  // //Testing
+  
   const root = document.getElementById('root')
   ReactDOM.render(<Root store={ store }/>, root);
 });

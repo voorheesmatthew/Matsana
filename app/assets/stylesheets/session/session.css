@@ -1,0 +1,78 @@
+.session-form-outer {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to top right, rgba(255,82,99,0.9) 10%, rgba(255,115,129,0.9) 65%, rgba(252,189,1,0.9) 125%);
+}
+
+.session-form-container {
+  display: flex;
+  justify-content: center;
+  background: transparent;
+  width: 100%;
+}
+
+.session-form-content {
+  border-radius: 4px;
+  background: white;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.session-form-elements {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px;
+  height: 400px;
+  width: 400px;
+}
+.session-guest-button {
+  color: white;
+  border: 0;
+  background: none;
+  box-shadow: none;
+  border-radius: 4px;
+  background-color: #14aaf5;
+  height: 40px;
+}
+
+.session-form {
+  width: 80%
+}
+
+.session-form-inputs {
+ color: #848f99;
+}
+
+.session-form-type {
+  margin: 0px;
+  font-weight: 400;
+}
+
+.session-form-inputs {
+  font-size: 12px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.session-submit {
+  border: 0;
+  background: none;
+  box-shadow: none;
+  border-radius: 4px;
+  background-color: #14aaf5;
+  height: 40px;
+  color: white;
+}
+
+.session-submit:hover {
+  cursor: pointer;
+  background-color: #118cca;
+}
+.session-guest-button:hover {
+  cursor: pointer;
+  background-color: #118cca;
+}

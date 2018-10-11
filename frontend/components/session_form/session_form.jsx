@@ -10,6 +10,7 @@ class SessionForm extends React.Component {
       password: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.guestUserLogin = this.guestUserLogin.bind(this);
   }
 
   update(field) {
@@ -36,50 +37,74 @@ class SessionForm extends React.Component {
     );
   }
 
-  render() {
-    return (
-      <div className="session-modal-container">
-        <h1>{this.props.formType}</h1>
-        <form onSubmit={this.handleSubmit} className="session-form-box">
-          <div className="session-form">
+  guestUserLogin() {
+    this.setState({
+      email: 'travis@veryrice.com',
+      password: 'snwbrdng'
+    }, () => document.getElementById('login').click())
+  }
 
-            {
-              (this.props.formType === "Log In")
-              ? <div></div>
-              : <label >Full Name<br/>
-                <input
-                  type="text"
-                  value={this.state.name}
-                  onChange={this.update('name')}
-                  className="session-input"
-                  />
-              </label>
-            }
-            <br/>
-            <label> Email Address<br/>
-              <input
-                type="email"
-                value={this.state.email}
-                onChange={this.update('email')}
-                className="session-input"
-                />
-            </label>
-            <br/>
-            <label> Password<br/>
-              <input
-                type="password"
-                value={this.state.password}
-                onChange={this.update('password')}
-                className="session-input"
-                />
-            </label>
-            <input
-              className="session-submit"
-              type="submit"
-              value={this.props.formType}
-              />
+  render() {
+
+    let guestButton;
+    if (this.props.formType === 'Log In') {
+      guestButton = <button onClick={this.guestUserLogin} className="session-guest-button">
+        Use Guest Account
+      </button>
+    }
+    return (
+      <div className="session-form-outer">
+        <div className="session-form-container">
+          <div className="session-form-content">
+            <div className="session-form-elements">
+              <h1 className="session-form-type">{this.props.formType}</h1>
+              <div>{guestButton}</div>
+              <div className="session-login-seperator">or</div>
+              <form onSubmit={this.handleSubmit} className="session-form">
+                <div className="session-form-inputs">
+
+                  {
+                    (this.props.formType === "Log In")
+                    ? <div></div>
+                    : <label >Full Name<br/>
+                      <input
+                        type="text"
+                        value={this.state.name}
+                        onChange={this.update('name')}
+                        className="session-input"
+                        />
+                    </label>
+                  }
+                  <br/>
+                  <label> Email Address<br/>
+                    <input
+                      type="email"
+                      value={this.state.email}
+                      onChange={this.update('email')}
+                      className="session-input"
+                      />
+                  </label>
+                  <br/>
+                  <label> Password<br/>
+                    <input
+                      type="password"
+                      value={this.state.password}
+                      onChange={this.update('password')}
+                      className="session-input"
+                      />
+                  </label>
+                  <br/>
+                  <input
+                    id='login'
+                    className="session-submit"
+                    type="submit"
+                    value={this.props.formType}
+                    />
+                </div>
+              </form>
+            </div>
           </div>
-        </form>
+        </div>
       </div>
     );
   }
