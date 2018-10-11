@@ -27,7 +27,7 @@ class SessionForm extends React.Component {
 
   renderErrors() {
     return(
-      <ul>
+      <ul className="session-errors-ul">
         {this.props.errors.map((error, i) => (
           <li key={`error${i}`}>
             {error}
@@ -58,7 +58,11 @@ class SessionForm extends React.Component {
       </div>
     }
     return (
-      <div className="session-form-outer">
+      <div>
+      <div className="session-outer">
+        <div className="session-header"> matsana
+
+        </div>
         <div className="session-form-container">
           <div className="session-form-content">
             <div className="session-form-elements">
@@ -66,6 +70,7 @@ class SessionForm extends React.Component {
               <div>{guestButton}</div>
               <div>{divider}</div>
               <form onSubmit={this.handleSubmit} className="session-form">
+                <div>{this.renderErrors()}</div>
                 <div className="session-form-inputs">
 
                   {
@@ -113,6 +118,15 @@ class SessionForm extends React.Component {
             </div>
           </div>
         </div>
+        <div className="session-footer">
+          {
+            (this.props.formType === "Log In")
+            ? <span>Don't have an account? <span className ="session-switch">{this.props.navLink}</span></span>
+            : <span>Already signed up? <span className ="session-switch">{this.props.navLink}</span></span>
+          }
+        </div>
+      </div>
+
       </div>
     );
   }

@@ -8,6 +8,7 @@ const msp = ({ errors }) => {
   return {
     errors: errors.session,
     formType: 'Sign Up',
+    navLink: <Link to="/login">Log in</Link>
   };
 };
 
@@ -21,4 +22,3 @@ export default connect(msp, mdp)(SessionForm);
 
 // TODO: add:
 // Already have an account?
-// navLink: <Link to="/login">Log in</Link>

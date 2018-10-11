@@ -1,12 +1,34 @@
-.session-form-outer {
-  height: 100%;
+.session-outer {
+  min-height: 100vh;
   width: 100%;
   background: linear-gradient(to top right, rgba(255,82,99,0.9) 10%, rgba(255,115,129,0.9) 65%, rgba(252,189,1,0.9) 125%);
-  /* position: absolute;
-  top: 0; */
-  /* display: flex;
-  justify-content: center;
-  flex-direction: column; */
+  display: flex;
+  flex-direction: column;
+}
+.session-switch a {
+  text-decoration: none;
+  color: white;
+  border: 1px solid white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.session-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 75px;
+  color: white;
+  font-size: 30px;
+}
+
+.session-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+  color: white;
+  font-size: 14px;
 }
 
 .session-form-container {
@@ -23,7 +45,7 @@
   flex-direction: column;
   border-radius: 4px;
   background: white;
-  margin-top: 50px;
+  margin-top: 40px;
   height: 565px;
   width: 585px;
 }
@@ -52,11 +74,30 @@
 
 .session-login-seperator {
   font-size: 24px;
-  color: rgb(183, 191, 198);;
+  color: rgb(183, 191, 198);
+  width: 110%;
+}
+.session-login-seperator::before {
+  display: inline-block;
+  margin: 0 20px 8px 0;
+  height: 1px;
+  content: " ";
+  text-shadow: none;
+  background-color: rgb(183, 191, 198);;
+  width: 180px;
+}
+.session-login-seperator::after {
+  display: inline-block;
+  margin: 0 0 8px 20px;
+  height: 1px;
+  content: " ";
+  text-shadow: none;
+  background-color: rgb(183, 191, 198);
+  width: 180px;
 }
 
 .session-form {
-  width: 80%
+  width: 90%
 }
 
 .session-form-inputs {
@@ -80,6 +121,7 @@
   width: 130%;
   padding-top: 25px
 }
+
 .session-form-inputs .session-input {
   background-color: #fff;
   border: 1px solid #d5dce0;
@@ -89,6 +131,7 @@
   margin: 0;
   padding: 0 0 0 10px;
   width: 100%;
+  margin-top: 10px;
 }
 
 .session-submit-container {
@@ -116,4 +159,9 @@
 .session-guest-button:hover {
   cursor: pointer;
   background-color: #118cca;
+}
+
+.session-errors-ul {
+  list-style-type: none;
+  text-align: center;
 }
