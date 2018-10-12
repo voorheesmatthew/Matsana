@@ -24,8 +24,11 @@
 
 .splash-header-nav a {
   text-decoration: none;
-  color: black;
+  color: darkgrey;
   padding: 5px;
+}
+.splash-header-nav a:hover {
+  color: black;
 }
 
 .splash-header-nav a:nth-child(2) {

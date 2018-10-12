@@ -5,15 +5,24 @@ import {
   CLEAR_ERRORS
 } from '../actions/session_actions';
 
-export default (oldState = [], action) => {
+const parseErrors = (errors) => {
+  let objErrors = {};
+  for (let i = 0; i < errors.length; i++) {
+    let words = errors[i].split(' ');
+    objErrors[words[0]] = errors[i];
+  }
+  return objErrors;
+};
+
+export default (oldState = {}, action) => {
   Object.freeze(oldState);
   switch (action.type) {
     case RECEIVE_SESSION_ERRORS:
-      return action.errors;
+      return parseErrors(action.errors);
     case CLEAR_ERRORS:
-      return [];
+      return {};
     case RECEIVE_CURRENT_USER:
-      return [];
+      return {};
     default:
       return oldState;
   }

@@ -13,6 +13,10 @@
   padding: 5px;
   border-radius: 5px;
 }
+.session-switch a:hover {
+  color: darkgrey;
+  background-color: white;
+}
 
 .session-header {
   display: flex;
@@ -194,4 +198,8 @@
   padding: 10px;
   border-radius: 7px;
   font-weight: bold;
+}
+
+.session-errors-su {
+  color: #f36d75;
 }

@@ -32,9 +32,11 @@ class SessionForm extends React.Component {
   }
 
   renderErrors() {
+    // debugger;
+    let errors = Object.values(this.props.errors)
     return(
       <ul className="session-errors-ul">
-        {this.props.errors.map((error, i) => (
+        {errors.map((error, i) => (
           <li key={`error${i}`}>
             {error}
           </li>
@@ -74,13 +76,17 @@ class SessionForm extends React.Component {
               <div>{guestButton}</div>
               <div className="session-divider">{divider}</div>
               <form onSubmit={this.handleSubmit} className="session-form">
-                <div>{this.renderErrors()}</div>
+                {
+                  (this.props.formType === "Log In")
+                  ? <div>{this.renderErrors()}</div>
+                  : null
+                }
                 <div className="session-form-inputs">
 
                   {
                     (this.props.formType === "Log In")
                     ? <div></div>
-                    : <label >Full Name<br/>
+                    : <label >Full Name: <span className="session-errors-su">{this.props.errors.Name}</span><br/>
                       <input
                         type="text"
                         value={this.state.name}
@@ -90,7 +96,7 @@ class SessionForm extends React.Component {
                     </label>
                   }
                   <br/>
-                  <label> Email Address<br/>
+                  <label> Email Address: <span className="session-errors-su">{this.props.errors.Email}</span><br/>
                     <input
                       type="email"
                       value={this.state.email}
@@ -99,7 +105,7 @@ class SessionForm extends React.Component {
                       />
                   </label>
                   <br/>
-                  <label> Password<br/>
+                  <label> Password: <span className="session-errors-su">{this.props.errors.Password}</span><br/>
                     <input
                       type="password"
                       value={this.state.password}
