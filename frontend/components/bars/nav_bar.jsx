@@ -8,15 +8,20 @@ const NavBar = ({ currentUser }) => {
 
   const inMatsanaNavBar = () => (
     <div className="nav-outer">
+      <div className="nav-header">
+          matsana
+      </div>
+
       <div className="nav-bar-contents">
-        <div className="nav-header">
-        </div>
         <div className="nav-sections">
+          Home
         </div>
         <div className="nav-projects">
+          Fullstack
         </div>
-        <div className="nav-footer">
-        </div>
+      </div>
+      <div className="nav-footer">
+        LinkedIn Github Etc
       </div>
     </div>
   );

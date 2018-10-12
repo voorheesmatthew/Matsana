@@ -1,0 +1,31 @@
+.nav-outer {
+  min-height: 800px;
+  min-width: 245px;
+  background-color: #161b27;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.nav-bar-contents {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  flex: 1;
+  padding: 20px
+}
+
+.nav-header {
+  padding: 20px
+}
+
+.nav-sections {
+  min-height: 150px;
+}
+
+
+.nav-footer {
+  text-align: center;
+  
+}
