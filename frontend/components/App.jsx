@@ -13,8 +13,8 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 const App = () => (
   <div className="app-outer">
     <header className="bars-container">
-      <NavBarContainer id="left"/>
-      <TopBarContainer id="right"/>
+      <NavBarContainer/>
+      <TopBarContainer/>
     </header>
 
     <Switch>

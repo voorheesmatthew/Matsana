@@ -14,10 +14,21 @@ const NavBar = ({ currentUser }) => {
 
       <div className="nav-bar-contents">
         <div className="nav-sections">
-          Home
+          <div>Home</div>
+          <div>Tasks</div>
         </div>
         <div className="nav-projects">
-          Fullstack
+          <ul>projects
+            <li>Fullstack</li>
+            <li>Another Project</li>
+            <li>Another Project</li>
+            <li>Another Project</li>
+            <li>Another Project</li>
+            <li>Another Project</li>
+            <li>Another Project</li>
+            <li>Another Project</li>
+            <li>Another Project</li>
+          </ul>
         </div>
       </div>
       <div className="nav-footer">

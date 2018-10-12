@@ -1,7 +1,8 @@
 .top-bar-outer {
-  width: 100%;
+  width: auto;
   height: 75px;
-  position: sticky;
+  background-color: red;
+  margin-left: 245px;
 }
 
 .top-bar-contents {
