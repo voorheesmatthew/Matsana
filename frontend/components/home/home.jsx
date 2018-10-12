@@ -6,7 +6,7 @@ class HomePage extends React.Component {
 
   render() {
     return (
-      <div>Your home page</div>
+      <div className="home-outer">Your home page</div>
     );
   }
 }
