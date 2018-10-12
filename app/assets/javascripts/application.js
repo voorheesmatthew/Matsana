@@ -16,22 +16,3 @@
 //= require_tree .
 //= require jquery
 //= require jquery_ujs
-/*jshint esversion: 6 */
-
-export const showDropdown = () => {
-    document.getElementById("top-bar-dropdown").classList.toggle("show");
-};
-
-window.onclick = function(event) {
-  if (!event.target.matches('.top-bar-name-btn')) {
-
-    let dropdowns = document.getElementsByClassName("top-bar-dropdown-list");
-    let i;
-    for (i = 0; i < dropdowns.length; i++) {
-      let openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-};
