@@ -16,11 +16,11 @@
 //= require_tree .
 //= require jquery
 //= require jquery_ujs
-
+/*jshint esversion: 6 */
 
 export const showDropdown = () => {
     document.getElementById("top-bar-dropdown").classList.toggle("show");
-}
+};
 
 window.onclick = function(event) {
   if (!event.target.matches('.top-bar-name-btn')) {
@@ -34,4 +34,4 @@ window.onclick = function(event) {
       }
     }
   }
-}
+};
