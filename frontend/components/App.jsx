@@ -10,9 +10,14 @@ import SplashPage from './splash_page/splash_page';
 import HomePage from './home/home';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
+const appHead = document.getElementById('app-head')
+if (appHead) {
+  appHead.setAttribute("hidden", true)
+}
+
 const App = () => (
   <div className="app-outer">
-    <header className="bars-container">
+    <header id="app-head" className="bars-container">
       <NavBarContainer/>
       <TopBarContainer/>
     </header>
