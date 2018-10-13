@@ -35,9 +35,12 @@ class TopBar extends React.Component {
 
     return (
       <div className="top-bar-outer">
+        
         {
           (this.props.currentUser)
-          ? <div className="top-bar-contents"><div className="top_bar-title">Home</div>{this.inMatsanaTopBar()}</div>
+          ? <div className="top-bar-contents">
+          <div className="top_bar-title">Home</div>{this.inMatsanaTopBar()}
+          </div>
           : null
         }
       </div>

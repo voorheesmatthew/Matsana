@@ -8,7 +8,7 @@ const NavBar = ({ currentUser }) => {
 
   const inMatsanaNavBar = () => (
     <div className="nav-outer">
-      <div className="nav-header">
+      <div className="nav-header top-left">
           matsana
       </div>
 

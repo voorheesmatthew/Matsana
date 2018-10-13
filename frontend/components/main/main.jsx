@@ -8,10 +8,10 @@ import HomePage from './home/home';
 
 const MainPage = () => (
   <div className="main-outer">
-    <div id="left" className="bars-container">
+    <div id="left" className="column">
       <NavBarContainer/>
     </div>
-    <div id="right" className="bars-container">
+    <div id="right" className="column">
       <TopBarContainer/>
       <HomePage/>
     </div>
