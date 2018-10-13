@@ -10,7 +10,7 @@ class NavBar extends React.Component {
   render() {
     return (
       <div className="nav-outer">
-        <div className="nav-header top-left">
+        <div className="nav-header">
           matsana
         </div>
 

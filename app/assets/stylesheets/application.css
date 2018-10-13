@@ -26,11 +26,15 @@ html {
 }
 
 body {
+    /*makes the body non-scrollable (we will add scrolling to the sidebar and main content containers)*/
   height: 100%;
-  overflow: hidden;  /*makes the body non-scrollable (we will add scrolling to the sidebar and main content containers)*/
   margin: 0px;  /*removes default style*/
   display: flex;  /*enables flex content for its children*/
   box-sizing: border-box;
+}
+
+.main-outer {
+  overflow: hidden !important;
 }
 
 .column {
@@ -43,7 +47,7 @@ body {
     flex-shrink: 0;  /*makes sure that content is not cut off in a smaller browser window*/
 }
 
-.top-left {
+.nav-header {
   flex-shink: 0;
 }
 

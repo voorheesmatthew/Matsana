@@ -9,7 +9,7 @@
   flex-direction: column;
   justify-content: space-between;
   position: absolute;
-  overflow: scroll;
+  /* overflow: scroll; */
 }
 
 .nav-bar-contents {

@@ -20,7 +20,7 @@ class TopBar extends React.Component {
   render() {
 
     return (
-      <div className="top-bar-outer">
+      <div className="top-bar-outer top-right">
         <div className="top-bar-contents">
 
           <div className="top_bar-title">
