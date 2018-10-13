@@ -2,7 +2,6 @@
   width: auto;
   height: 75px;
   background-color: red;
-  margin-left: 245px;
 }
 
 .top-bar-contents {
@@ -10,25 +9,29 @@
   flex-direction: row;
   justify-content: space-between;
   padding: 20px;
+
 }
 
 .top_bar-title {
   font-weight: 500;
   font-size: 20px;
   margin-left: 20px;
+
 }
 
 .top-bar-name-btn {
-    background-color: #3498DB;
-    color: white;
-    font-size: 14px;
-    cursor: pointer;
-    border: 1px solid grey;
-    border-radius: 50%;
-    margin-bottom: 5px;
+  background-color: #3498DB;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  border: 1px solid grey;
+  border-radius: 50%;
+  margin-bottom: 5px;
+
 }
 .top-bar-name-btn:focus {
   outline: none;
+
 }
 
 .dropdown {
@@ -43,7 +46,6 @@
     position: absolute;
     background-color: white;
     min-width: 250px;
-    min-height: 30px;
     box-shadow: 0px 8px 12px 0px rgba(0,0,0,0.1);
     z-index: 1;
     right: 0;
@@ -57,9 +59,6 @@
     padding-top: 12px;
     padding-bottom: 12px;
     text-decoration: none;
-    display: flex;
-    align-items: center;
-    float: left;
     width: 100%;
 }
 
@@ -81,5 +80,3 @@
 .top-bar-dropdown-list div:hover button {
   color: white;
 }
-
-.show {display:block;}
