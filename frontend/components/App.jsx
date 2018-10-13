@@ -2,29 +2,18 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { Route, Redirect, Switch, Link, HashRouter } from 'react-router-dom'
 
-import TopBarContainer from './bars/top_bar_container';
-import NavBarContainer from './bars/nav_bar_container';
+import SplashPage from './splash_page/splash_page';
 import LoginFormContainer from './session_form/login_form_container';
 import SignupFormContainer from './session_form/signup_form_container';
-import SplashPage from './splash_page/splash_page';
-import HomePage from './home/home';
+import MainPage from './main/main'
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
-const appHead = document.getElementById('app-head')
-if (appHead) {
-  appHead.setAttribute("hidden", true)
-}
 
 const App = () => (
   <div className="app-outer">
-    <header id="app-head" className="bars-container">
-      <NavBarContainer/>
-      <TopBarContainer/>
-    </header>
-
     <Switch>
       <AuthRoute exact path="/" component={SplashPage}/>
-      <ProtectedRoute exact path="/home" component={HomePage}/>
+      <ProtectedRoute exact path="/main" component={MainPage}/>
       <AuthRoute exact path="/login" component={LoginFormContainer} />
       <AuthRoute exact path="/signup" component={SignupFormContainer} />
       <Redirect to="/"/>
