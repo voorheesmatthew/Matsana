@@ -18,6 +18,24 @@ class User < ApplicationRecord
   attr_reader :password
   after_initialize :ensure_session_token
 
+  has_many :teams_users,
+  primary_key: :id,
+  foreign_key: :user_id,
+  class_name: :TeamUser
+
+  has_many :projects_users,
+  primary_key: :id,
+  foreign_key: :user_id,
+  class_name: :ProjectUser
+
+  has_many :teams,
+  through: :teams_users,
+  source: :team
+
+  has_many :projects,
+  through: :projects_users,
+  source: :project
+
   def ensure_session_token
     self.session_token ||= SecureRandom::urlsafe_base64
   end
