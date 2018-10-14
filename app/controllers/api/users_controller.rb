@@ -7,12 +7,10 @@ class Api::UsersController < ApplicationController
     if @user.save
       fteam = Team.new({team_name: 'My First Team'})
       fteam.save!
-      team_user = TeamUser.new({team_id: fteam.id, user_id: @user.id})
-      team_user.save!
+      team_user = TeamUser.create({team_id: fteam.id, user_id: @user.id})
 
       login(@user)
       render "api/users/show"
-      #"api/home/#{@user.id}" #Not sure what to do in place of a team_id or is this a backend route???
     else
       render json: @user.errors.full_messages, status: 422
     end
