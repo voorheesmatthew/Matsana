@@ -1,3 +1,13 @@
+# == Schema Information
+#
+# Table name: teams
+#
+#  id         :bigint(8)        not null, primary key
+#  team_name  :string           not null
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
 require 'test_helper'
 
 class TeamTest < ActiveSupport::TestCase
