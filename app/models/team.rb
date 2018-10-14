@@ -21,7 +21,7 @@ class Team < ApplicationRecord
   foreign_key: :team_id,
   class_name: :TeamUser
 
-  has_many: :users,
+  has_many :users,
   through: :teams_users,
   source: :user
 

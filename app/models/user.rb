@@ -16,7 +16,7 @@ class User < ApplicationRecord
   validates :email, uniqueness: true, presence: true
   validates :password, length: {minimum: 8, allow_nil: true}
   attr_reader :password
-  after_initialize :ensure_session_token
+  after_initialize :ensure_session_token, :create_first_team
 
   has_many :teams_users,
   primary_key: :id,
@@ -35,6 +35,10 @@ class User < ApplicationRecord
   has_many :projects,
   through: :projects_users,
   source: :project
+
+  def create_first_team
+
+  end
 
   def ensure_session_token
     self.session_token ||= SecureRandom::urlsafe_base64
