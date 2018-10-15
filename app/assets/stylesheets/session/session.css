@@ -175,9 +175,15 @@
   cursor: pointer;
   background-color: #118cca;
 }
+.session-submit:focus {
+  outline:0;
+}
 .session-guest-button:hover {
   cursor: pointer;
   background-color: #118cca;
+}
+.session-guest-button:focus {
+  outline:0;
 }
 
 .session-errors-ul {

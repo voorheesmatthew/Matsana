@@ -8,6 +8,7 @@ export const RECEIVE_TEAM_ERRORS = "RECEIVE_TEAM_ERRORS";
 
 export const receiveErrors = errors => ({
   type: RECEIVE_TEAM_ERRORS,
+  errors
 });
 
 // TODO: Build in team errors
