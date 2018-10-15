@@ -4,7 +4,7 @@ import { Route, Redirect, Switch, Link, HashRouter } from 'react-router-dom'
 
 import NavBarContainer from './bars/nav_bar_container';
 import TopBarContainer from './bars/top_bar_container';
-import HomePage from './home/home';
+import HomeContainer from './home/home_container';
 
 const MainPage = () => (
   <div className="main-outer">
@@ -13,7 +13,7 @@ const MainPage = () => (
     </div>
     <div id="right" className="column">
       <TopBarContainer/>
-      <HomePage/>
+      <HomeContainer/>
     </div>
   </div>
 )

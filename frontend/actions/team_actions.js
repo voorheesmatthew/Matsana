@@ -19,7 +19,7 @@ export const requestTeams = (currentUser) => {
     .then(teams => {
       return dispatch({
         type: RECEIVE_ALL_TEAMS,
-        teams: teams.responseJSON
+        teams
       });
     });
   };

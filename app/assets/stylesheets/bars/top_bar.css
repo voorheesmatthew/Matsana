@@ -42,7 +42,6 @@
 
 
 .top-bar-dropdown-list {
-    /* display: none; */
     position: absolute;
     background-color: white;
     min-width: 250px;
@@ -79,4 +78,8 @@
 }
 .top-bar-dropdown-list div:hover button {
   color: white;
+}
+
+.dropdown-hidden {
+  display: none;
 }

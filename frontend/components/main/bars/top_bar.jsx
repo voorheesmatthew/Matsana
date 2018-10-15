@@ -6,15 +6,15 @@ class TopBar extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      openDropdown: false
+      isDropdownOpen: false
     }
     this.toggleDropdown = this.toggleDropdown.bind(this)
   }
 
   toggleDropdown() {
-    // this.setState({
-    //   openDropdown: !this.state.openDropdown
-    // })
+    this.setState({
+      isDropdownOpen: !this.state.isDropdownOpen
+    })
   }
 
   render() {
@@ -30,14 +30,14 @@ class TopBar extends React.Component {
           <div className="dropdown">
 
             <button
-              onClick={this.toggleDropdown()}
+              onClick={this.toggleDropdown}
               className="top-bar-name-btn">
               {this.props.currentUser.name.split("")[0]}
             </button>
 
             <div
               id="top-bar-dropdown"
-              className="top-bar-dropdown-list">
+              className={this.state.isDropdownOpen ? "top-bar-dropdown-list" : "dropdown-hidden"}>
               <div>
                 <button
                   className="top-bar-logout"
