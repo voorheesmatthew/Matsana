@@ -3,14 +3,15 @@ import { connect } from 'react-redux';
 import { requestTeams } from '../../../actions/team_actions';
 import HomePage from './home';
 
-const mapStateToProps = ({session, entities: {users}}) => {
+const mapStateToProps = ({session, entities: { users, teams }}) => {
   return {
-    currentUser: users[session.userId]
+    currentUser: users[session.userId],
+    currentTeam: teams[session.currentTeamId]
   };
 };
 
 const mapDispatchToProps = dispatch => ({
-  fetchTeams: (currentUser) => dispatch(requestTeams(currentUser))
+  
 });
 
 

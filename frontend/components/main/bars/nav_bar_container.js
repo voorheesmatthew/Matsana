@@ -3,9 +3,10 @@ import { connect } from 'react-redux';
 
 import NavBar from './nav_bar';
 
-const mapStateToProps = ({ session, entities: { users } }) => {
+const mapStateToProps = ({ session, entities: { users, teams } }) => {
   return {
-    currentUser: users[session.userId]
+    currentUser: users[session.userId],
+    currentTeam: teams[session.currentTeamId]
   };
 };
 

@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { requestTeams } from '../../actions/team_actions';
 import MainPage from './main';
 
-const mapStateToProps = ({ session, entities: { users, teams } }) => {
+const mapStateToProps = ({ session, entities: { users } }) => {
   return {
     currentUser: users[session.userId]
   };

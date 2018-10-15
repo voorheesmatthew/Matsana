@@ -5,15 +5,15 @@ import { logout } from '../../../actions/session_actions';
 import { requestTeams } from '../../../actions/team_actions';
 import TopBar from './top_bar';
 
-const mapStateToProps = ({ session, entities: { users } }) => {
+const mapStateToProps = ({ session, entities: { users, teams } }) => {
   return {
-    currentUser: users[session.userId]
+    currentUser: users[session.userId],
+    currentTeam: teams[session.currentTeamId]
   };
 };
 
 const mapDispatchToProps = dispatch => ({
-  logout: () => dispatch(logout()),
-  fetchTeams: (currentUser) => dispatch(requestTeams(currentUser))
+  logout: () => dispatch(logout())
 });
 
 export default connect(

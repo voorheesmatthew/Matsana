@@ -5,6 +5,12 @@
       user: current_user
     ).html_safe %>
   </script>
+  <script type="text/javascript">
+    window.currentTeamId = <%= render(
+      "api/teams/team.json.jbuilder",
+      team: current_user.teams.first
+    ).html_safe %>
+  </script>
 <% end %>
 
 <main id="root"></main>

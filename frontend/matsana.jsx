@@ -11,7 +11,10 @@ document.addEventListener('DOMContentLoaded',()=>{
       entities: {
         users: { [window.currentUser.id]: window.currentUser }
       },
-      session: { userId: window.currentUser.id }
+      session: {
+        userId: window.currentUser.id,
+        currentTeamId: window.currentTeamId.id
+      }
     };
     store = configureStore(preloadedState);
     // delete window.currentUser;
@@ -21,7 +24,6 @@ document.addEventListener('DOMContentLoaded',()=>{
   // //Testing
   window.getState = store.getState;
   window.dispatch = store.dispatch;
-  // window.login = login;
   // //Testing
 
   const root = document.getElementById('root')
