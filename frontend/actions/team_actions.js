@@ -19,7 +19,7 @@ export const requestTeams = (currentUser) => {
 
 export const requestTeam = (id) => {
   return dispatch => {
-    return TeamAPIUtil.requestTeam(id)
+    return TeamAPIUtil.fetchTeam(id)
     .then(team => {
       return dispatch({
         type: RECEIVE_TEAM,

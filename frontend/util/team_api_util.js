@@ -1,20 +1,20 @@
 /*jshint esversion: 6 */
 export const fetchTeams = (currentUser) => {
-  return ({
+  return $.ajax({
     method: 'GET',
     url: `api/users/${currentUser.id}/teams`
   });
 };
 
 export const fetchTeam = (id) => {
-  return ({
+  return $.ajax({
     method: 'GET',
     url: `api/teams/${id}`
   });
 };
 
 export const createTeam = (team) => {
-  return ({
+  return $.ajax({
     method: 'POST',
     url: `api/teams`,
     data: { team }
@@ -22,7 +22,7 @@ export const createTeam = (team) => {
 };
 
 export const updateTeam = (team) => {
-  return ({
+  return $.ajax({
     method: 'PATCH',
     url: `api/teams/${team.id}`,
     data: { team }
@@ -30,8 +30,16 @@ export const updateTeam = (team) => {
 };
 
 export const deleteTeam = (id) => {
-  return ({
+  return $.ajax({
     method: 'DELETE',
     url: `api/teams/${id}`
+  });
+};
+
+export const createTeamUser = (teamUser) => {
+  return $.ajax({
+    method: 'POST',
+    url: `api/teams`,
+    data: { team }
   });
 };

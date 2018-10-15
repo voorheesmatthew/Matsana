@@ -19,7 +19,7 @@ export const requestProjects = (currentTeam) => {
 
 export const requestProject = (id) => {
   return dispatch => {
-    return ProjectAPIUtil.requestProject(id)
+    return ProjectAPIUtil.fetchProject(id)
     .then(project => {
       return dispatch({
         type: RECEIVE_PROJECT,
