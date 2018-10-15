@@ -10,6 +10,11 @@ class Api::ProjectsUsersController < ApplicationController
     end
   end
 
+  def index
+    @projects_users = current_user.projects_users
+    render "api/projects_users/index"
+  end
+
   def show
     @project_user = ProjectUser.find(params[:id])
     render "api/projects_users/show"

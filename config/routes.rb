@@ -5,11 +5,13 @@ Rails.application.routes.draw do
     resources :teams, only: [:create, :update, :show, :destroy]
     resources :users, only: [:create] do
       resources :teams, only: [:index]
+      resources :teams_users, only: [:index]
     end
 
     resources :projects, only: [:create, :update, :show, :destroy]
     resources :teams, only: [] do
       resources :projects, only: [:index]
+      resources :projects_users, only: [:index]
     end
 
     resources :teams_users, only: [:create, :show, :destroy]
@@ -19,6 +21,6 @@ Rails.application.routes.draw do
 
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  
+
   root "static_pages#root"
 end

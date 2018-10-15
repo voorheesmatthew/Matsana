@@ -4,6 +4,13 @@ import * as TeamAPIUtil from '../util/team_api_util';
 export const RECEIVE_ALL_TEAMS = "RECEIVE_ALL_TEAMS";
 export const RECEIVE_TEAM = "RECEIVE_TEAM";
 export const REMOVE_TEAM = "REMOVE_TEAM";
+export const RECEIVE_TEAM_ERRORS = "RECEIVE_TEAM_ERRORS";
+
+export const receiveErrors = errors => ({
+  type: RECEIVE_TEAM_ERRORS,
+});
+
+// TODO: Build in team errors
 
 export const requestTeams = (currentUser) => {
   return dispatch => {
@@ -11,7 +18,7 @@ export const requestTeams = (currentUser) => {
     .then(teams => {
       return dispatch({
         type: RECEIVE_ALL_TEAMS,
-        teams
+        teams: teams.responseJSON
       });
     });
   };

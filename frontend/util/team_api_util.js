@@ -35,11 +35,3 @@ export const deleteTeam = (id) => {
     url: `api/teams/${id}`
   });
 };
-
-export const createTeamUser = (teamUser) => {
-  return $.ajax({
-    method: 'POST',
-    url: `api/teams`,
-    data: { team }
-  });
-};

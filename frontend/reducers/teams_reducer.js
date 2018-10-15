@@ -6,6 +6,7 @@ import { RECEIVE_ALL_TEAMS,
 } from '../actions/team_actions';
 
 const teamsReducer = (oldState = {}, action) => {
+  // debugger;
   Object.freeze(oldState);
   switch (action.type) {
     case RECEIVE_ALL_TEAMS:

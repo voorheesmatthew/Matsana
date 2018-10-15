@@ -10,6 +10,11 @@ class Api::TeamsUsersController < ApplicationController
     end
   end
 
+  def index
+    @teams_users = current_user.teams_users
+    render "api/teams_users/index"
+  end
+
   def show
     @team_user = TeamUser.find(params[:id])
     render "api/teams_users/show"
