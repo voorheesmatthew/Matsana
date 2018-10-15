@@ -4,9 +4,6 @@ import { Link } from 'react-router-dom';
 
 class HomePage extends React.Component {
 
-  componentDidMount() {
-    this.props.fetchTeams(this.props.currentUser)
-  }
 
   render() {
     return (

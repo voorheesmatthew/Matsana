@@ -5,7 +5,7 @@ import HomePage from './home';
 
 const mapStateToProps = ({session, entities: {users}}) => {
   return {
-    currentUser: users[session.id]
+    currentUser: users[session.userId]
   };
 };
 
