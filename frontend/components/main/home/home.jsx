@@ -15,7 +15,7 @@ class HomePage extends React.Component {
   render() {
     return (
       <div className="home-outer">Your home page
-        "<button onClick={this.showModal}>New Project</button>"
+        {this.props.newProject}
       </div>
     );
   }

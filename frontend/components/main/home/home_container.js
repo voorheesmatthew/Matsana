@@ -18,7 +18,7 @@ const mapDispatchToProps = dispatch => ({
   processForm: (project) => dispatch(createProject(project)),
   newProject: (
     <button onClick={() => dispatch(openModal('project'))}>
-      Signup
+      New Project
     </button>
   ),
   closeModal: () => dispatch(closeModal())
