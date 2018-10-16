@@ -8,3 +8,7 @@
 
 user = User.create({name: 'Travis Rice', email: 'travis@veryrice.com',
 password: 'snwbrdng'})
+
+team = Team.create({team_name: 'My First Team!!'})
+
+team_user = TeamUser.create({user_id: user.id, team_id: team.id})

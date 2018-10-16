@@ -9,6 +9,9 @@ import HomeContainer from './home/home_container';
 class MainPage extends React.Component {
   constructor(props) {
     super(props)
+  }
+
+  componentWillMount() {
     this.props.fetchTeams(this.props.currentUser)
   }
 

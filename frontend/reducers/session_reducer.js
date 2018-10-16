@@ -11,10 +11,14 @@ const sessionReducer = (oldState = {}, action) => {
   Object.freeze(oldState);
   switch (action.type) {
     case RECEIVE_CURRENT_USER:
-      return merge({}, oldState, {userId: action.currentUser.id});
+      const newState = {
+        userId: action.currentUser.id,
+        currentTeamId: action.currentTeam.id
+      };
+      return merge({}, oldState, newState);
     case RECEIVE_CURRENT_TEAM:
-      debugger;
-      return merge({}, oldState, {currentTeamId: action.team.id});
+      return merge({}, oldState, {currentTeamId: action.currentTeam.id});
+      // TODO: bug here or in teamsReducer
     case LOGOUT_CURRENT_USER:
       return {userId: null, currentTeamId: null};
     default:

@@ -5,9 +5,12 @@ class Api::UsersController < ApplicationController
 
 
     if @user.save
-      fteam = Team.new({team_name: 'My First Team'})
-      fteam.save!
-      team_user = TeamUser.create({team_id: fteam.id, user_id: @user.id})
+      @team = Team.new({team_name: 'My First Team'})
+      if @team.save
+        team_user = TeamUser.create({team_id: @team.id, user_id: @user.id})
+      else
+        render json: @team.errors.full_messages, status: 422
+      end
 
       login(@user)
       render "api/users/show"
