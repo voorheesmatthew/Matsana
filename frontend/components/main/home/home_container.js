@@ -1,17 +1,27 @@
 /*jshint esversion: 6 */
+import React from 'react';
 import { connect } from 'react-redux';
-import { requestProjects } from '../../../actions/project_actions';
+import { requestProjects, createProject } from '../../../actions/project_actions';
+import { openModal, closeModal } from '../../../actions/modal_actions';
 import HomePage from './home';
 
 const mapStateToProps = ({session, entities: { users, teams }}) => {
   return {
     currentUser: users[session.userId],
-    currentTeamId: session.currentTeamId
+    currentTeamId: session.currentTeamId,
+    formType: 'project'
   };
 };
 
 const mapDispatchToProps = dispatch => ({
-  fetchProjects: (currentTeamId) => dispatch(requestProjects(currentTeamId))
+  fetchProjects: (currentTeamId) => dispatch(requestProjects(currentTeamId)),
+  processForm: (project) => dispatch(createProject(project)),
+  newProject: (
+    <button onClick={() => dispatch(openModal('project'))}>
+      Signup
+    </button>
+  ),
+  closeModal: () => dispatch(closeModal())
 });
 
 
