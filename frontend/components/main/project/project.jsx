@@ -7,7 +7,8 @@ class Project extends React.Component {
 
   render() {
     return (
-      <div>Project Show Page</div>
+      <div>Tasks will go here
+      </div>
     );
   }
 }

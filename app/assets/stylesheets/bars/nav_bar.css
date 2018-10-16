@@ -20,7 +20,14 @@
   color: white;
 }
 .nav-sections div a:hover {
-  color: grey
+  color: grey;
+}
+.nav-projects-ul li a {
+  text-decoration: none;
+  color: white;
+}
+.nav-projects-ul li a:hover {
+  color: grey;
 }
 .nav-projects ul {
   list-style-type: none;

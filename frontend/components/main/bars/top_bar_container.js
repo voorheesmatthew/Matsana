@@ -5,10 +5,11 @@ import { logout, requestCurrentTeam } from '../../../actions/session_actions';
 import { requestTeams } from '../../../actions/team_actions';
 import TopBar from './top_bar';
 
-const mapStateToProps = ({ session, entities: { users, teams } }) => {
+const mapStateToProps = ({ session, entities: { users, teams, projects } }) => {
   return {
     currentUser: users[session.userId],
-    currentTeamId: session.currentTeamId
+    currentTeamId: session.currentTeamId,
+    projects: projects
   };
 };
 

@@ -32,9 +32,10 @@ class NewProjectForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const project = Object.assign({}, this.state);
-    this.props.processForm(project);
-    this.props.closeModal();
-    this.navigateToShow(project.id);
+    this.props.processForm(project).then(action => {
+      this.navigateToShow(action.project.id);
+      this.props.closeModal();
+    });
   }
 
   render() {

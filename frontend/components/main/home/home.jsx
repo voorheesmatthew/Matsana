@@ -4,8 +4,22 @@ import { Link } from 'react-router-dom';
 
 class HomePage extends React.Component {
 
-  componentDidMount() {
-    this.props.fetchProjects(this.props.currentTeamId)
+
+
+  renderProjects() {
+    // debugger;
+    let projects = Object.values(this.props.projects)
+    return(
+      <ul className="home-projects-ul"> Projects
+        {projects.map((project, i) => (
+          <li key={`project${i}`}>
+            <Link to={`/${project.id}`}>
+              {project.project_name}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    );
   }
 
   render() {

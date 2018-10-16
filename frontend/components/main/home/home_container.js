@@ -5,11 +5,12 @@ import { requestProjects } from '../../../actions/project_actions';
 import { openModal, closeModal } from '../../../actions/modal_actions';
 import HomePage from './home';
 
-const mapStateToProps = ({session, entities: { users, teams }}) => {
+const mapStateToProps = ({session, entities: { users, projects }}) => {
   return {
     currentUser: users[session.userId],
     currentTeamId: session.currentTeamId,
-    formType: 'project'
+    formType: 'project',
+    projects: projects
   };
 };
 

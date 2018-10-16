@@ -9,6 +9,7 @@ class TopBar extends React.Component {
       isDropdownOpen: false
     }
     this.toggleDropdown = this.toggleDropdown.bind(this)
+    this.leftHalf = this.leftHalf.bind(this)
   }
   componentWillMount() {
     this.props.fetchTeams(this.props.currentUser)
@@ -20,16 +21,38 @@ class TopBar extends React.Component {
     })
   }
 
+  leftHalf() {
+    if (this.props.match.path === "/home") {
+      return (
+        <div className="top-bar-left">
+          <div className="top_bar-title">
+            Home
+          </div>
+        </div>
+      );
+    } else {
+      const id = parseInt(this.props.match.params.project)
+      // debugger
+
+      const name = this.props.projects[id] ?
+      this.props.projects[id].project_name
+      : "nope"
+      return (
+        <div className="top-bar-left">
+          <div className="top_bar-title">
+            {`${name}`}
+          </div>
+        </div>
+      );
+    }
+  }
+
   render() {
 
     return (
       <div className="top-bar-outer top-right">
         <div className="top-bar-contents">
-
-          <div className="top_bar-title">
-            Home
-          </div>
-
+          {this.leftHalf()}
           <div className="dropdown">
 
             <button

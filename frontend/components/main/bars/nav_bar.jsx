@@ -3,8 +3,9 @@ import { withRouter } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 class NavBar extends React.Component {
-  constructor(props) {
-    super(props)
+
+  componentDidMount() {
+    this.props.fetchProjects(this.props.currentTeamId)
   }
 
   renderProjects() {
@@ -14,7 +15,9 @@ class NavBar extends React.Component {
       <ul className="nav-projects-ul"> Projects
         {projects.map((project, i) => (
           <li key={`project${i}`}>
-            {project.project_name}
+            <Link to={`/${project.id}`}>
+              {project.project_name}
+            </Link>
           </li>
         ))}
       </ul>

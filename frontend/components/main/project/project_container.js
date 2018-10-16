@@ -12,7 +12,7 @@ const mapStateToProps = ({session, entities: { users, projects }}) => {
 };
 
 const mapDispatchToProps = dispatch => ({
-
+  
 });
 
 
