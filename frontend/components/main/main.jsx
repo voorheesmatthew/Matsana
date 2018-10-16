@@ -25,10 +25,7 @@ class MainPage extends React.Component {
         </div>
         <div id="right" className="column">
           <TopBarContainer/>
-          <Switch>
-            <ProtectedRoute exact path="/home" component={HomeContainer}/>
-            <ProtectedRoute path="/:projectId" component={ProjectContainer}/>
-          </Switch>
+          <ProtectedRoute exact path="/home" component={HomeContainer}/>
         </div>
       </div>
     );
