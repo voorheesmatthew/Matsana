@@ -2,10 +2,14 @@
 // This comes verbatim from benchbnb project(or most other apps with frontend user auth)
 import * as APIUtil from '../util/session_api_util';
 
+import * as TeamAPIUtil from '../util/team_api_util';
+
 export const RECEIVE_CURRENT_USER = "RECEIVE_CURRENT_USER";
 export const LOGOUT_CURRENT_USER = "LOGOUT_CURRENT_USER";
 export const RECEIVE_SESSION_ERRORS = "RECEIVE_SESSION_ERRORS";
 export const CLEAR_ERRORS ="CLEAR_ERRORS";
+
+export const RECEIVE_CURRENT_TEAM = "RECEIVE_CURRENT_TEAM";
 
 export const receiveCurrentUser = currentUser => ({
   type: RECEIVE_CURRENT_USER,
@@ -46,3 +50,15 @@ export const logout = () => dispatch => (
     dispatch(logoutCurrentUser())
   ))
 );
+
+export const requestCurrentTeam = (id) => {
+  return dispatch => {
+    return TeamAPIUtil.fetchTeam(id)
+    .then(team => {
+      return dispatch({
+        type: RECEIVE_CURRENT_TEAM,
+        team
+      });
+    });
+  };
+};

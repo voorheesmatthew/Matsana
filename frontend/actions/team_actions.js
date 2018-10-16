@@ -2,7 +2,7 @@
 import * as TeamAPIUtil from '../util/team_api_util';
 
 export const RECEIVE_ALL_TEAMS = "RECEIVE_ALL_TEAMS";
-export const RECEIVE_CURRENT_TEAM = "RECEIVE_CURRENT_TEAM";
+// export const RECEIVE_CURRENT_TEAM = "RECEIVE_CURRENT_TEAM";
 export const RECEIVE_TEAM = "RECEIVE_TEAM";
 export const REMOVE_TEAM = "REMOVE_TEAM";
 export const RECEIVE_TEAM_ERRORS = "RECEIVE_TEAM_ERRORS";
@@ -28,17 +28,17 @@ export const requestTeams = (currentUser) => {
   };
 };
 
-export const requestCurrentTeam = (id) => {
-  return dispatch => {
-    return TeamAPIUtil.fetchTeam(id)
-    .then(team => {
-      return dispatch({
-        type: RECEIVE_CURRENT_TEAM,
-        team
-      });
-    });
-  };
-};
+// export const requestCurrentTeam = (id) => {
+//   return dispatch => {
+//     return TeamAPIUtil.fetchTeam(id)
+//     .then(team => {
+//       return dispatch({
+//         type: RECEIVE_CURRENT_TEAM,
+//         team
+//       });
+//     });
+//   };
+// };
 
 export const requestTeam = (id) => {
   return dispatch => {

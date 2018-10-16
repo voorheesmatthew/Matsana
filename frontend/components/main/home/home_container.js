@@ -1,6 +1,6 @@
 /*jshint esversion: 6 */
 import { connect } from 'react-redux';
-import { requestTeams } from '../../../actions/team_actions';
+import { requestProjects } from '../../../actions/project_actions';
 import HomePage from './home';
 
 const mapStateToProps = ({session, entities: { users, teams }}) => {
@@ -11,7 +11,7 @@ const mapStateToProps = ({session, entities: { users, teams }}) => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  
+  fetchProjects: (currentTeam) => dispatch(requestProjects(currentTeam))
 });
 
 

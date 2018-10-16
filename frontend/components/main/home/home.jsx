@@ -4,6 +4,10 @@ import { Link } from 'react-router-dom';
 
 class HomePage extends React.Component {
 
+  componentDidMount() {
+    // debugger;
+    // this.props.fetchProjects(this.props.currentTeam)
+  }
 
   render() {
     return (

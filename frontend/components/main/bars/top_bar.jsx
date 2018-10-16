@@ -12,7 +12,6 @@ class TopBar extends React.Component {
   }
 
   toggleDropdown() {
-    debugger;
     this.setState({
       isDropdownOpen: !this.state.isDropdownOpen
     })

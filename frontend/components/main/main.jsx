@@ -7,8 +7,8 @@ import TopBarContainer from './bars/top_bar_container';
 import HomeContainer from './home/home_container';
 
 class MainPage extends React.Component {
-
-  componentDidMount() {
+  constructor(props) {
+    super(props)
     this.props.fetchTeams(this.props.currentUser)
   }
 
@@ -26,16 +26,6 @@ class MainPage extends React.Component {
     );
   }
 }
-// const MainPage = () => (
-//   <div className="main-outer">
-//     <div id="left" className="column">
-//       <NavBarContainer/>
-//     </div>
-//     <div id="right" className="column">
-//       <TopBarContainer/>
-//       <HomeContainer/>
-//     </div>
-//   </div>
-// )
+
 
 export default withRouter(MainPage);
