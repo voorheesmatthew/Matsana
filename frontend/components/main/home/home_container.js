@@ -6,12 +6,12 @@ import HomePage from './home';
 const mapStateToProps = ({session, entities: { users, teams }}) => {
   return {
     currentUser: users[session.userId],
-    currentTeam: teams[session.currentTeamId]
+    currentTeamId: session.currentTeamId
   };
 };
 
 const mapDispatchToProps = dispatch => ({
-  fetchProjects: (currentTeam) => dispatch(requestProjects(currentTeam))
+  fetchProjects: (currentTeamId) => dispatch(requestProjects(currentTeamId))
 });
 
 

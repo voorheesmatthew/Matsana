@@ -3,86 +3,33 @@ import { withRouter } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 class HomePage extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      show: false
+    }
+  }
 
-  componentDidMount() {
-    // debugger;
-    // this.props.fetchProjects(this.props.currentTeam)
+  showModal() {
+    this.setState({
+      show: false
+    })
+  }
+
+  hideModal() {
+    this.setState({
+      show: false
+    })
+  }
+
+  componentWillMount() {
+    this.props.fetchProjects(this.props.currentTeamId)
   }
 
   render() {
     return (
       <div className="home-outer">Your home page
-        <div>Here's another element</div>
-        <div>Here's another element</div>
-        <div>Here's another element</div>
-        <div>Here's another element</div>
-        <div>Here's another element</div>
-        <div>Here's another element</div>
-        <div>Here's another element</div>
-        <div>Here's another element</div>
-        <div>Here's another element</div>
-        <div>Here's another element</div>
-        <div>Here's another element</div>
-        <div>Here's another element</div>
-        <div>Here's another element</div>
-        <div>Here's another element</div>
-        <div>Here's another element</div>
-        <div>Here's another element</div>
-        <div>Here's another element</div>
-        <div>Here's another element</div>
-        <div>Here's another element</div>
-        <div>Here's another element</div>
-        <div>Here's another element</div>
-        <div>Here's another element</div>
-        <div>Here's another element</div>
-        <div>Here's another element</div>
-        <div>Here's another element</div>
-        <div>Here's another element</div>
-        <div>Here's another element</div>
-        <div>Here's another element</div>
-        <div>Here's another element</div>
-        <div>Here's another element</div>
-        <div>Here's another element</div>
-        <div>Here's another element</div>
-        <div>Here's another element</div>
-        <div>Here's another element</div>
-        <div>Here's another element</div>
-        <div>Here's another element</div>
-        <div>Here's another element</div>
-        <div>Here's another element</div>
-        <div>Here's another element</div>
-        <div>Here's another element</div>
-        <div>Here's another element</div>
-        <div>Here's another element</div>
-        <div>Here's another element</div>
-        <div>Here's another element</div>
-        <div>Here's another element</div>
-        <div>Here's another element</div>
-        <div>Here's another element</div>
-        <div>Here's another element</div>
-        <div>Here's another element</div>
-        <div>Here's another element</div>
-        <div>Here's another element</div>
-        <div>Here's another element</div>
-        <div>Here's another element</div>
-        <div>Here's another element</div>
-        <div>Here's another element</div>
-        <div>Here's another element</div>
-        <div>Here's another element</div>
-        <div>Here's another element</div>
-        <div>Here's another element</div>
-        <div>Here's another element</div>
-        <div>Here's another element</div>
-        <div>Here's another element</div>
-        <div>Here's another element</div>
-        <div>Here's another element</div>
-        <div>Here's another element</div>
-        <div>Here's another element</div>
-        <div>Here's another element</div>
-        <div>Here's another element</div>
-        <div>Here's another element</div>
-        <div>Here's another element</div>
-        <div>Here's another element</div>
+        <button onClick={this.showModal}>New Project</button>
       </div>
     );
   }

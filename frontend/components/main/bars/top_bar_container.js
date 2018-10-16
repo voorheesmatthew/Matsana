@@ -8,13 +8,13 @@ import TopBar from './top_bar';
 const mapStateToProps = ({ session, entities: { users, teams } }) => {
   return {
     currentUser: users[session.userId],
-    currentTeam: teams[session.currentTeamId]
+    currentTeamId: session.currentTeamId
   };
 };
 
 const mapDispatchToProps = dispatch => ({
   logout: () => dispatch(logout()),
-  fetchCurrentTeam: (id) => dispatch(requestCurrentTeam(id))
+  fetchCurrentTeam: (currentTeamId) => dispatch(requestCurrentTeam(currentTeamId))
 });
 
 export default connect(

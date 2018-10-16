@@ -5,9 +5,9 @@ export const RECEIVE_ALL_PROJECTS = "RECEIVE_ALL_PROJECTS";
 export const RECEIVE_PROJECT = "RECEIVE_PROJECT";
 export const REMOVE_PROJECT = "REMOVE_PROJECT";
 
-export const requestProjects = (currentTeam) => {
+export const requestProjects = (currentTeamId) => {
   return dispatch => {
-    return ProjectAPIUtil.fetchProjects(currentTeam)
+    return ProjectAPIUtil.fetchProjects(currentTeamId)
     .then(projects => {
       return dispatch({
         type: RECEIVE_ALL_PROJECTS,

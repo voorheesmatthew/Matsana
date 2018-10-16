@@ -1,8 +1,8 @@
 /*jshint esversion: 6 */
-export const fetchProjects = (currentTeam) => {
+export const fetchProjects = (currentTeamId) => {
   return $.ajax({
     method: `GET`,
-    url: `api/teams/${currentTeam.id}/projects`
+    url: `api/teams/${currentTeamId}/projects`
   });
 };
 
