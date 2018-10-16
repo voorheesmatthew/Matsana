@@ -1,12 +1,11 @@
 /*jshint esversion: 6 */
 import { connect } from 'react-redux';
 
-import NavBar from './nav_bar';
+import ProjectWrapper from './project_wrapper';
 
-const mapStateToProps = ({ session, entities: { users, teams } }) => {
+const mapStateToProps = ({ session, entities: { users } }) => {
   return {
     currentUser: users[session.userId]
-    // currentTeam: teams[session.currentTeamId]
   };
 };
 
@@ -17,4 +16,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(NavBar);
+)(ProjectWrapper);

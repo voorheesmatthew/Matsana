@@ -13,6 +13,7 @@ const mapStateToProps = ({ session, entities: { users, teams } }) => {
 };
 
 const mapDispatchToProps = dispatch => ({
+  fetchTeams: (currentUser) => dispatch(requestTeams(currentUser)),
   logout: () => dispatch(logout()),
   fetchCurrentTeam: (currentTeamId) => dispatch(requestCurrentTeam(currentTeamId))
 });

@@ -13,9 +13,15 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  padding: 20px
+  padding: 20px;
 }
-
+.nav-sections div a {
+  text-decoration: none;
+  color: white;
+}
+.nav-sections div a:hover {
+  color: grey
+}
 .nav-projects ul {
   list-style-type: none;
   padding: 0px;

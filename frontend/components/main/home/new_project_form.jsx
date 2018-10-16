@@ -10,12 +10,17 @@ class NewProjectForm extends React.Component {
       team_id: null
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.navigateToShow = this.navigateToShow.bind(this);
   }
 
   componentDidMount() {
     this.setState({
       team_id: this.props.currentTeamId
     })
+  }
+
+  navigateToShow(id) {
+    this.props.history.push(`/${id}`);
   }
 
   update(field) {
@@ -29,8 +34,7 @@ class NewProjectForm extends React.Component {
     const project = Object.assign({}, this.state);
     this.props.processForm(project);
     this.props.closeModal();
-    // debugger
-    return <Redirect to='/'/>
+    this.navigateToShow(project.id);
   }
 
   render() {

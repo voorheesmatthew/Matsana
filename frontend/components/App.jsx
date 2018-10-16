@@ -6,8 +6,8 @@ import Modal from './modal/modal';
 import SplashPage from './splash_page/splash_page';
 import LoginFormContainer from './session_form/login_form_container';
 import SignupFormContainer from './session_form/signup_form_container';
-import MainPageContainer from './main/main_container'
-import ProjectContainer from './main/project/project_container'
+import HomeWrapperContainer from './main/wrappers/home_wrapper_container';
+import ProjectWrapperContainer from './main/wrappers/project_wrapper_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 
@@ -16,10 +16,11 @@ const App = () => (
     <Modal />
     <Switch>
       <AuthRoute exact path="/" component={SplashPage}/>
-      <ProtectedRoute exact path="/home" component={MainPageContainer}/>
-      <ProtectedRoute exact path="/project" component={ProjectContainer}/>
       <AuthRoute exact path="/login" component={LoginFormContainer} />
       <AuthRoute exact path="/signup" component={SignupFormContainer} />
+      <ProtectedRoute exact path="/home" component={HomeWrapperContainer}/>
+      <ProtectedRoute exact path="/:project" component={ProjectWrapperContainer}/>
+
       <Redirect to="/"/>
     </Switch>
   </div>

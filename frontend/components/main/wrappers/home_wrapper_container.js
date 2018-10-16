@@ -1,8 +1,8 @@
 /*jshint esversion: 6 */
 import { connect } from 'react-redux';
 
-import { requestTeams } from '../../actions/team_actions';
-import MainPage from './main';
+import { requestTeams } from '../../../actions/team_actions';
+import HomeWrapper from './home_wrapper';
 
 const mapStateToProps = ({ session, entities: { users } }) => {
   return {
@@ -11,10 +11,10 @@ const mapStateToProps = ({ session, entities: { users } }) => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  fetchTeams: (currentUser) => dispatch(requestTeams(currentUser))
+  
 });
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(MainPage);
+)(HomeWrapper);

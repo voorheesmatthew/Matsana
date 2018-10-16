@@ -10,8 +10,8 @@ class TopBar extends React.Component {
     }
     this.toggleDropdown = this.toggleDropdown.bind(this)
   }
-  componentDidMount() {
-    // this.props.fetchCurrentTeam(this.props.currentTeam.id)
+  componentWillMount() {
+    this.props.fetchTeams(this.props.currentUser)
   }
 
   toggleDropdown() {
