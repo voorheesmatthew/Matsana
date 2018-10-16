@@ -3,19 +3,15 @@ import { withRouter } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 class HomePage extends React.Component {
-  constructor(props) {
-    super(props)
 
-  }
-
-  componentWillMount() {
+  componentDidMount() {
     this.props.fetchProjects(this.props.currentTeamId)
   }
 
   render() {
     return (
       <div className="home-outer">Your home page
-        {this.props.newProject}
+        {this.props.newProjectButton}
       </div>
     );
   }

@@ -1,15 +1,21 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import { Link } from 'react-router-dom';
-
+import { Link, Redirect } from 'react-router-dom';
 
 class NewProjectForm extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      projectName: '',
+      project_name: '',
+      team_id: null
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  componentDidMount() {
+    this.setState({
+      team_id: this.props.currentTeamId
+    })
   }
 
   update(field) {
@@ -22,6 +28,9 @@ class NewProjectForm extends React.Component {
     e.preventDefault();
     const project = Object.assign({}, this.state);
     this.props.processForm(project);
+    this.props.closeModal();
+    // debugger
+    return <Redirect to='/'/>
   }
 
   render() {
@@ -37,8 +46,8 @@ class NewProjectForm extends React.Component {
                   <label> Project Name:<br/>
                     <input
                       type="text"
-                      value={this.state.projectName}
-                      onChange={this.update('projectName')}
+                      value={this.state.project}
+                      onChange={this.update('project_name')}
                       className="project-input"
                       />
                   </label>
@@ -48,7 +57,7 @@ class NewProjectForm extends React.Component {
                     <input
                       className="project-submit"
                       type="submit"
-                      value={this.props.formType}
+                      value="Create Project"
                       />
                   </div>
                 </div>

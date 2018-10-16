@@ -7,6 +7,7 @@ import SplashPage from './splash_page/splash_page';
 import LoginFormContainer from './session_form/login_form_container';
 import SignupFormContainer from './session_form/signup_form_container';
 import MainPageContainer from './main/main_container'
+import ProjectContainer from './main/project/project_container'
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 
