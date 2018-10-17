@@ -78,11 +78,7 @@ class TopBar extends React.Component {
               id="top-bar-dropdown-project"
               className={this.state.isProjectDropdownOpen ? "top-bar-dropdown-list-project" : "dropdown-hidden"}>
               <div>
-                <button
-                  className="top-bar-edit"
-                  onClick={this.props.logout}>
-                  Edit
-                </button>
+                {this.props.editProjectButton}
                 <button
                   className="top-bar-delete"
                   onClick={this.destroyProject}>

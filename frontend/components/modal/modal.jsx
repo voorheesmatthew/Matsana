@@ -3,6 +3,7 @@ import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
 
 import NewProjectForm from '../main/home/new_project_form_container';
+import UpdateProjectForm from '../main/project/update_project_form_container';
 
 
 
@@ -15,9 +16,9 @@ function Modal({modal, closeModal}) {
     case 'project':
       component = <NewProjectForm />;
       break;
-    // case 'updateProject':
-    //   component = <UpdateProjectForm />
-    //   break;
+    case 'updateProject':
+      component = <UpdateProjectForm />
+      break;
     default:
       return null;
   }
