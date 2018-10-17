@@ -14,6 +14,13 @@ Rails.application.routes.draw do
       resources :projects_users, only: [:index]
     end
 
+    resources :users, only: [] do
+      resources :teams, only: [] do
+        resources :tasks, only: [:index]
+      end
+    end
+
+    resources :tasks, only: [:create, :update, :destroy]
     resources :teams_users, only: [:create, :show, :destroy]
     resources :projects_users, only: [:create, :show, :destroy]
 
