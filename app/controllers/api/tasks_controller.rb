@@ -19,7 +19,7 @@ class Api::TasksController < ApplicationController
   end
 
   def index
-    @tasks = Team.find(params[:team_id]).projects
+    @tasks = Team.find(params[:team_id]).tasks
     render "api/tasks/index"
   end
 

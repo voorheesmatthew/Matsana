@@ -26,4 +26,9 @@ class Project < ApplicationRecord
   through: :projects_users,
   source: :user
 
+  has_many :tasks,
+  primary_key: :id,
+  foreign_key: :project_id,
+  class_name: :Task
+
 end

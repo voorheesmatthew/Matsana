@@ -36,6 +36,11 @@ class User < ApplicationRecord
   through: :projects_users,
   source: :project
 
+  has_many :tasks,
+  primary_key: :id,
+  foreign_key: :user_id,
+  class_name: :Task
+
   def ensure_session_token
     self.session_token ||= SecureRandom::urlsafe_base64
   end

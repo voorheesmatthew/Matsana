@@ -25,4 +25,9 @@ class Team < ApplicationRecord
   through: :teams_users,
   source: :user
 
+  has_many :tasks,
+  primary_key: :id,
+  foreign_key: :team_id,
+  class_name: :Task
+
 end
