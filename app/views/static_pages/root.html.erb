@@ -8,7 +8,7 @@
   <script type="text/javascript">
     window.currentTeamId = <%= render(
       "api/teams/team.json.jbuilder",
-      team: current_user.teams.first
+      team: current_user.teams.last
     ).html_safe %>
   </script>
 <% end %>
