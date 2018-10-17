@@ -16,7 +16,7 @@
   /* background-color: blue; */
   padding: 10px;
   display: inline-grid;
-  width: 80%;
+  width: 100%;
 }
 
 .home-projects-ul li {
@@ -31,6 +31,7 @@
   align-self: center;
   transition: all .2s ease-in-out;
   overflow: hidden;
+  padding: 5px;
 }
 .home-projects-ul li:hover {
   transform: scale(1.1);
