@@ -16,7 +16,7 @@ const mapStateToProps = ({ session, entities: { users, teams, projects } }) => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  fetchProjects: (currentTeamId) => dispatch(requestProjects(currentTeamId))
+
 });
 
 export default connect(

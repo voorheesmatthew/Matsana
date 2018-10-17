@@ -13,7 +13,9 @@ class ProjectWrapper extends React.Component {
   }
 
   componentWillMount() {
-    // this.props.fetchTeams(this.props.currentUser)
+    this.props.fetchTeams(this.props.currentUser),
+    this.props.fetchTasks(this.props.currentUser.id, this.props.currentTeamId),
+    this.props.fetchProjects(this.props.currentTeamId)
   }
 
   render() {

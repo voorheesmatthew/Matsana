@@ -15,7 +15,6 @@ const mapStateToProps = ({session, entities: { users, projects }}) => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  fetchProjects: (currentTeamId) => dispatch(requestProjects(currentTeamId)),
   newProjectButton: (
     <button onClick={() => dispatch(openModal('project'))}>
       New Project

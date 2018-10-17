@@ -24,10 +24,6 @@ class TopBar extends React.Component {
     return {color: `${randColor}`};
   }
 
-  componentWillMount() {
-    this.props.fetchTeams(this.props.currentUser)
-  }
-
   navigateToHome() {
     this.props.history.push(`/`);
   }

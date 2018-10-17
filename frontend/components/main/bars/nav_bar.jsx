@@ -4,10 +4,6 @@ import { Link } from 'react-router-dom';
 
 class NavBar extends React.Component {
 
-  componentDidMount() {
-    this.props.fetchProjects(this.props.currentTeamId)
-  }
-
   renderProjects() {
     // debugger;
     let projects = Object.values(this.props.projects)
