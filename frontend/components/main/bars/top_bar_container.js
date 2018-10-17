@@ -1,6 +1,7 @@
 /*jshint esversion: 6 */
 import React from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 
 import { logout, requestCurrentTeam } from '../../../actions/session_actions';
 import { requestTeams } from '../../../actions/team_actions';
@@ -29,7 +30,7 @@ const mapDispatchToProps = dispatch => ({
   closeModal: () => dispatch(closeModal())
 });
 
-export default connect(
+export default withRouter(connect(
   mapStateToProps,
   mapDispatchToProps
-)(TopBar);
+)(TopBar));

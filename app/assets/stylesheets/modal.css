@@ -29,6 +29,7 @@
   border-radius: 3%;
   border:1px solid #cccccc;
   margin-bottom: 20px;
+  padding-left: 5px;
 }
 
 input:focus {

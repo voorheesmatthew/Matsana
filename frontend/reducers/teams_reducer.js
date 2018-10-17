@@ -5,6 +5,7 @@ import { RECEIVE_ALL_TEAMS,
   REMOVE_TEAM,
 } from '../actions/team_actions';
 import { RECEIVE_CURRENT_USER } from '../actions/session_actions';
+import { LOGOUT_CURRENT_USER } from '../actions/session_actions';
 
 const teamsReducer = (oldState = {}, action) => {
   Object.freeze(oldState);
@@ -20,6 +21,8 @@ const teamsReducer = (oldState = {}, action) => {
       const newState = merge({}, oldState);
       delete newState[action.teamId];
       return newState;
+    case LOGOUT_CURRENT_USER:
+      return {};
     default:
       return oldState;
   }

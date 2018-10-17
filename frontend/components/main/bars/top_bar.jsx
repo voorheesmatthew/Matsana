@@ -60,6 +60,7 @@ class TopBar extends React.Component {
       );
     } else {
       const id = parseInt(this.props.match.params.project)
+      // debugger
       const name = this.props.projects[id] ?
       this.props.projects[id].project_name
       : "nope"

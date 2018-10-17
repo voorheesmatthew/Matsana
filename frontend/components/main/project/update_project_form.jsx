@@ -8,7 +8,7 @@ class UpdateProjectForm extends React.Component {
     // debugger
     this.state = {
       id: parseInt(this.props.location.pathname.slice(1)),
-      project_name: undefined,
+      project_name: "",
       team_id: this.props.currentTeamId
     };
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -51,7 +51,7 @@ class UpdateProjectForm extends React.Component {
                   <label> Project Name:<br/>
                     <input
                       type="text"
-                      value={this.state.project}
+                      value={this.state.project_name}
                       onChange={this.update('project_name')}
                       className="project-input"
                       />

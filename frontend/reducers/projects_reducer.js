@@ -4,6 +4,7 @@ import { RECEIVE_ALL_PROJECTS,
   RECEIVE_PROJECT,
   REMOVE_PROJECT,
 } from '../actions/project_actions';
+import { LOGOUT_CURRENT_USER } from '../actions/session_actions';
 
 const projectsReducer = (oldState = {}, action) => {
   Object.freeze(oldState);
@@ -16,6 +17,8 @@ const projectsReducer = (oldState = {}, action) => {
       const newState = merge({}, oldState);
       delete newState[action.projectId];
       return newState;
+    case LOGOUT_CURRENT_USER:
+      return {};
     default:
       return oldState;
   }
