@@ -15,6 +15,9 @@ function Modal({modal, closeModal}) {
     case 'project':
       component = <NewProjectForm />;
       break;
+    // case 'updateProject':
+    //   component = <UpdateProjectForm />
+    //   break;
     default:
       return null;
   }

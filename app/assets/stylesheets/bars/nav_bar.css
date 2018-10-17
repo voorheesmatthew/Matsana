@@ -18,6 +18,8 @@
 .nav-sections div a {
   text-decoration: none;
   color: white;
+  display: inline-block;
+  width: 100%;
 }
 .nav-sections div a:hover {
   color: grey;
