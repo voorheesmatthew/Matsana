@@ -7,12 +7,13 @@ import Project from './project';
 
 const mapStateToProps = ({session, entities: { users, projects }}) => {
   return {
-    currentUser: users[session.userId]
+    currentUser: users[session.userId],
+    projects
   };
 };
 
 const mapDispatchToProps = dispatch => ({
-  
+
 });
 
 

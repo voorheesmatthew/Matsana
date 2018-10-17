@@ -11,6 +11,7 @@ class NavBar extends React.Component {
   renderProjects() {
     // debugger;
     let projects = Object.values(this.props.projects)
+    // debugger
     return(
       <ul className="nav-projects-ul"> Projects
         {projects.map((project, i) => (
@@ -23,6 +24,8 @@ class NavBar extends React.Component {
       </ul>
     );
   }
+
+
 
   render() {
     return (

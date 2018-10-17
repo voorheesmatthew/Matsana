@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 
 import { logout, requestCurrentTeam } from '../../../actions/session_actions';
 import { requestTeams } from '../../../actions/team_actions';
+import { deleteProject } from '../../../actions/project_actions';
 import TopBar from './top_bar';
 
 const mapStateToProps = ({ session, entities: { users, teams, projects } }) => {
@@ -15,6 +16,7 @@ const mapStateToProps = ({ session, entities: { users, teams, projects } }) => {
 
 const mapDispatchToProps = dispatch => ({
   fetchTeams: (currentUser) => dispatch(requestTeams(currentUser)),
+  deleteProject: (projectId) => dispatch(deleteProject(projectId)),
   logout: () => dispatch(logout()),
   fetchCurrentTeam: (currentTeamId) => dispatch(requestCurrentTeam(currentTeamId))
 });
