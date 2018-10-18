@@ -1,18 +1,20 @@
 /*jshint esversion: 6 */
 import React from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
+
 import { requestProjects } from '../../../actions/project_actions';
 
 import NavBar from './nav_bar';
 
-const mapStateToProps = ({ session, entities: { users, teams, projects } }) => {
+const mapStateToProps = (state, ownProps) => {
+  // debugger
   return {
-    currentUser: users[session.userId],
-    currentTeamId: session.currentTeamId,
-    homeLink: <Link to="/home">Home</Link>,
-    tasksLink: <Link to="/tasks">Tasks</Link>,
-    projects: projects
+    currentUser: state.entities.users[state.session.userId],
+    currentTeamId: state.session.currentTeamId,
+    homeLink: <Link to="/home" className={ownProps.match.path === "/home" ? "proj-selected" : null }>Home</Link>,
+    tasksLink: <Link to="/tasks" className={ownProps.match.path === "/tasks" ? "proj-selected" : null }>Tasks</Link>,
+    projects: state.entities.projects
   };
 };
 
@@ -20,7 +22,8 @@ const mapDispatchToProps = dispatch => ({
 
 });
 
-export default connect(
+export default withRouter(connect(
   mapStateToProps,
   mapDispatchToProps
-)(NavBar);
+)(NavBar));
+// { session, entities: { users, teams, projects } }

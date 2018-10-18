@@ -7,35 +7,55 @@
   color: white;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .nav-bar-contents {
   display: flex;
   flex-direction: column;
   height: 100%;
-  padding: 20px;
+  /* padding: 20px; */
 }
 .nav-sections div a {
   text-decoration: none;
   color: white;
   display: inline-block;
   width: 100%;
+  padding-left: 20px;
+  font-size: 14px;
 }
 .nav-sections div a:hover {
-  color: grey;
+  background-color: #3b404a;
+}
+.nav-projects-ul li {
+  display: flex;
+  flex-direction: row;
+  position: relative;
 }
 .nav-projects-ul li a {
   text-decoration: none;
   color: white;
   display: inline-block;
   width: 100%;
+  padding-left: 20px;
+  font-size: 14px;
+  position: absolute;
+}
+.proj-selected {
+  background-color: #3b404a !important;
 }
 .nav-projects-ul li a:hover {
-  color: grey;
+  background-color: #3c404b80;
 }
+
 .nav-projects ul {
   list-style-type: none;
-  padding: 0px;
+  padding: 10px;
+}
+
+.nav-projects ul li::before {
+  content: "■";
+  color: pink;
 }
 
 .nav-header {

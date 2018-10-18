@@ -12,7 +12,8 @@ class NavBar extends React.Component {
       <ul className="nav-projects-ul"> Projects
         {projects.map((project, i) => (
           <li key={`project${i}`}>
-            <Link to={`/${project.id}`}>
+            <Link to={`/${project.id}`}
+              className={parseInt(this.props.match.params.project) === project.id ? "proj-selected" : null }>
               {project.project_name}
             </Link>
           </li>

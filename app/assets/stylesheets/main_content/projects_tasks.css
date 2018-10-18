@@ -1,7 +1,7 @@
 .proj-tasks-outer {
   /* margin: 15px; */
   /* background-color: #f6f8f9; */
-  background-color: red;
+  background-color: #f6f8f9;
   padding-top: 15px;
   padding-left: 15px;
   padding-right: 15px;
@@ -15,24 +15,72 @@
   padding-top: 3px;
 }
 
-.checkbox {
+/* .checkbox {
   width: 20px;
-  /* position: absolute;
+} */
+
+/* Test zone */
+/* .checkbox input {
   opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0; */
 }
+
+.checkbox label::before{
+    content: "";
+
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+
+    border: 1px solid;
+    border-color: #cadae2;
+    position: absolute;
+    top: 3px;
+}
+
+.checkbox label::after {
+    content: "";
+    height: 6px;
+    width: 9px;
+    border-radius: 50%;
+    border-left: 2px solid;
+    border-bottom: 2px solid;
+
+    transform: rotate(-45deg);
+    left: 4px;
+    top: 7px;
+    position: absolute;
+}
+
+.checkbox label {
+    position: relative;
+}
+
+
+.checkbox input + label::after {
+    content: none;
+}
+
+.checkbox input:checked + label::after {
+    content: "";
+}
+
+.new-task-form {
+  padding-left: 20px;
+} */
+
+/* Test zone */
+
+
 
 .task-name {
   width: 100%;
   border: none;
   font-size: 14px;
+  margin-left: 10px;
 }
 
 .new-task-form {
   width: 100%;
-  padding-left: 20px;
 }
 
 .new-task-input {
@@ -54,7 +102,5 @@
   height: 40px;
   align-items: center;
   border-bottom: 1px solid #cadae2;
+  position: relative;
 }
-
-
-/*  Test zone */

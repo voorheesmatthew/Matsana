@@ -62,11 +62,14 @@ class Project extends React.Component {
       <ul className="proj-tasks-ul"> Tasks
         {filtasks.map((task, i) => (
           <li key={`task${i}`}>
-            <input className="checkbox"
+            <div className="checkbox">
+            <input id="checkbox_1"
             type="checkbox"
             checked={task.complete}
             onChange={this.updateStatus(task.id, 'complete')}>
             </input>
+            <label htmlFor="checkbox_1"></label>
+            </div>
               <input
                 className="task-name"
                 type="text"
