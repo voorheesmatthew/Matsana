@@ -7,6 +7,7 @@ import SplashPage from './splash_page/splash_page';
 import LoginFormContainer from './session_form/login_form_container';
 import SignupFormContainer from './session_form/signup_form_container';
 import HomeWrapperContainer from './main/wrappers/home_wrapper_container';
+import TasksWrapperContainer from './main/wrappers/tasks_wrapper_container';
 import ProjectWrapperContainer from './main/wrappers/project_wrapper_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
@@ -19,6 +20,7 @@ const App = () => (
       <AuthRoute exact path="/login" component={LoginFormContainer} />
       <AuthRoute exact path="/signup" component={SignupFormContainer} />
       <ProtectedRoute exact path="/home" component={HomeWrapperContainer}/>
+      <ProtectedRoute exact path="/tasks" component={TasksWrapperContainer}/>
       <ProtectedRoute exact path="/:project" component={ProjectWrapperContainer}/>
 
       <Redirect to="/"/>

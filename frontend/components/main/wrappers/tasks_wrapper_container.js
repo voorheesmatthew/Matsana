@@ -5,7 +5,7 @@ import { requestTeams } from '../../../actions/team_actions';
 import { requestTasks } from '../../../actions/task_actions';
 import { requestProjects } from '../../../actions/project_actions';
 
-import HomeWrapper from './home_wrapper';
+import TasksWrapper from './tasks_wrapper';
 
 const mapStateToProps = ({ session, entities: { users } }) => {
   return {
@@ -23,4 +23,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(HomeWrapper);
+)(TasksWrapper);

@@ -33,7 +33,7 @@ class NavBar extends React.Component {
         <div className="nav-bar-contents">
           <div className="nav-sections">
             <div>{this.props.homeLink}</div>
-            <div>Tasks</div>
+            <div>{this.props.tasksLink}</div>
           </div>
           <div className="nav-projects">
             {this.renderProjects()}

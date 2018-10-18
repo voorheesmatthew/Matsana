@@ -11,6 +11,7 @@ const mapStateToProps = ({ session, entities: { users, teams, projects } }) => {
     currentUser: users[session.userId],
     currentTeamId: session.currentTeamId,
     homeLink: <Link to="/home">Home</Link>,
+    tasksLink: <Link to="/tasks">Tasks</Link>,
     projects: projects
   };
 };
