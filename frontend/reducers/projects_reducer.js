@@ -12,12 +12,14 @@ const projectsReducer = (oldState = {}, action) => {
     case RECEIVE_ALL_PROJECTS:
       return  action.projects;
     case RECEIVE_PROJECT:
+    // debugger
       return merge({}, oldState, {[action.project.id]: action.project});
     case REMOVE_PROJECT:
       const newState = merge({}, oldState);
       delete newState[action.projectId];
       return newState;
     case LOGOUT_CURRENT_USER:
+    // debugger
       return {};
     default:
       return oldState;
