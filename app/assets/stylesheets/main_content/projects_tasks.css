@@ -1,0 +1,60 @@
+.proj-tasks-outer {
+  /* margin: 15px; */
+  /* background-color: #f6f8f9; */
+  background-color: red;
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 100%;
+}
+
+.proj-tasks-container {
+  background: white;
+  box-shadow: #888888;
+  height: 100%;
+  padding-top: 3px;
+}
+
+.checkbox {
+  width: 20px;
+  /* position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0; */
+}
+
+.task-name {
+  width: 100%;
+  border: none;
+  font-size: 14px;
+}
+
+.new-task-form {
+  width: 100%;
+  padding-left: 20px;
+}
+
+.new-task-input {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.proj-tasks-ul {
+  list-style-type: none;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+
+.proj-tasks-ul li {
+  display: flex;
+  flex-direction: row;
+  height: 40px;
+  align-items: center;
+  border-bottom: 1px solid #cadae2;
+}
+
+
+/*  Test zone */

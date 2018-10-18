@@ -62,12 +62,13 @@ class Project extends React.Component {
       <ul className="proj-tasks-ul"> Tasks
         {filtasks.map((task, i) => (
           <li key={`task${i}`}>
-            <input
+            <input className="checkbox"
             type="checkbox"
             checked={task.complete}
             onChange={this.updateStatus(task.id, 'complete')}>
             </input>
               <input
+                className="task-name"
                 type="text"
                 value={task.task_name}
                 onChange={this.update(task.id, 'task_name')}
@@ -76,8 +77,10 @@ class Project extends React.Component {
           </li>
         ))}
         <li>
-          <form onSubmit={this.handleSubmit}>
+          <form className="new-task-form" onSubmit={this.handleSubmit}>
             <input
+              className="new-task-input"
+              placeholder="New Task"
               type="text"
               value={this.state.newTaskName}
               onChange={this.updateCreate()}>
@@ -101,8 +104,10 @@ class Project extends React.Component {
       return null;
     }
     return (
-      <div>The project {this.props.project.project_name} tasks will go here!
-        {this.renderTasks()}
+      <div className="proj-tasks-outer">
+        <div className="proj-tasks-container">
+          {this.renderTasks()}
+        </div>
       </div>
     );
   }
