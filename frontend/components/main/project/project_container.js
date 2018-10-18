@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
 import { requestProject, updateProject, deleteProject } from '../../../actions/project_actions';
-import { requestTasks, updateTask } from '../../../actions/task_actions';
+import { requestTasks, updateTask, createTask, deleteTask } from '../../../actions/task_actions';
 import Project from './project';
 import { openModal, closeModal } from '../../../actions/modal_actions';
 
@@ -18,7 +18,9 @@ const mapStateToProps = (state, ownProps) => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  processForm: (task) => dispatch(updateTask(task)),
+  createTask: (task) => dispatch(createTask(task)),
+  updateTask: (task) => dispatch(updateTask(task)),
+  deleteTask: (id) => dispatch(deleteTask(id)),
   closeModal: () => dispatch(closeModal())
 });
 

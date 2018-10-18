@@ -14,7 +14,7 @@
 #
 
 class Task < ApplicationRecord
-  validates :task_name, :team_id, presence: true
+  validates :team_id, presence: true
 
   belongs_to :team,
   primary_key: :id,

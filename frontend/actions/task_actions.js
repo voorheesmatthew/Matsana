@@ -17,18 +17,6 @@ export const requestTasks = (userId, teamId) => {
   };
 };
 
-// export const requestTask = (id) => {
-//   return dispatch => {
-//     return TaskAPIUtil.fetchTask(id)
-//     .then(task => {
-//       return dispatch({
-//         type: RECEIVE_TASK,
-//         task
-//       });
-//     });
-//   };
-// };
-
 export const createTask = (task) => {
   return dispatch => {
     return TaskAPIUtil.createTask(task)
