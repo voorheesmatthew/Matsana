@@ -10,6 +10,7 @@ class Api::TasksController < ApplicationController
 
   def update
     @task = Task.find(params[:id])
+    # debugger
     if @task.update(task_params)
       render "api/tasks/show"
     else
@@ -25,7 +26,7 @@ class Api::TasksController < ApplicationController
   def destroy
     @task = Task.find(params[:id])
     @task.destroy
-    render "api/projects/show"
+    render "api/tasks/show"
   end
 
   private

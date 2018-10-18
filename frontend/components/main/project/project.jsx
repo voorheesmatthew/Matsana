@@ -12,6 +12,8 @@ class Project extends React.Component {
     this.updateCreate = this.updateCreate.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
+    this.updateStatus = this.updateStatus.bind(this);
+    this.handleKeyDown = this.handleKeyDown.bind(this);
   }
 
 
@@ -19,11 +21,14 @@ class Project extends React.Component {
   update(taskId, field) {
     return e => {
       let task = {id: taskId, [field]: e.currentTarget.value}
-      if (task.task_name && task.task_name.length === 0) {
-        this.props.deleteTask(task.id)
-      } else {
-        this.props.updateTask(task);
-      }
+      this.props.updateTask(task);
+    }
+  }
+
+  updateStatus(taskId, field) {
+    return e => {
+      let task = {id: taskId, complete: e.currentTarget.checked}
+      this.props.updateTask(task);
     }
   }
 
@@ -43,6 +48,14 @@ class Project extends React.Component {
     }))
   }
 
+  handleKeyDown(taskId) {
+    return e => {
+      if (e.key === "Backspace" && e.currentTarget.value.length === 0) {
+        this.props.deleteTask(taskId)
+      }
+    };
+  }
+
   renderTasks() {
     let filtasks = this.filteredTasks()
     return(
@@ -52,12 +65,13 @@ class Project extends React.Component {
             <input
             type="checkbox"
             checked={task.complete}
-            onChange={task.id, this.update(task.id, 'complete')}>
+            onChange={this.updateStatus(task.id, 'complete')}>
             </input>
               <input
                 type="text"
                 value={task.task_name}
-                onChange={this.update(task.id, 'task_name')}>
+                onChange={this.update(task.id, 'task_name')}
+                onKeyDown={this.handleKeyDown(task.id)}>
               </input>
           </li>
         ))}
