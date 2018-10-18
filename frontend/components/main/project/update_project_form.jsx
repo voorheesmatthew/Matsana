@@ -33,9 +33,7 @@ class UpdateProjectForm extends React.Component {
     // debugger
     const project = Object.assign({}, this.state);
     // debugger
-    this.props.processForm(project).then(action => {
-      this.props.closeModal();
-    });
+    this.props.processForm(project).then(this.props.closeModal());
   }
 
   render() {
@@ -63,6 +61,7 @@ class UpdateProjectForm extends React.Component {
                       className="project-submit"
                       type="submit"
                       value="Update Project"
+                      disabled={!this.state.project_name}
                       />
                   </div>
                 </div>

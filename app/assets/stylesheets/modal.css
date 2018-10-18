@@ -42,6 +42,11 @@ input:focus {
   justify-content: flex-end;
 }
 
+.project-submit:disabled {
+  background-color: grey !important;
+  cursor: default !important;
+}
+
 .project-submit-container input {
   text-decoration: none;
   color: white;

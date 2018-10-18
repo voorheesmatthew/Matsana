@@ -63,6 +63,7 @@ class NewProjectForm extends React.Component {
                       className="project-submit"
                       type="submit"
                       value="Create Project"
+                      disabled={!this.state.project_name}
                       />
                   </div>
                 </div>
