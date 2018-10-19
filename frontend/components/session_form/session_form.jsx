@@ -1,7 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-// import logo from '../../../app/assets/images/animate-test-01sideflip.gif';
 
 
 
@@ -35,14 +34,13 @@ class SessionForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
-    // this.showLoadingPage();
-    // setTimeout(() => {
+    this.showLoadingPage();
+    setTimeout(() => {
       this.props.processForm(user)
-    // }, 3500);
+    }, 3500);
   }
 
   renderErrors() {
-    // debugger;
     let errors = Object.values(this.props.errors)
     return(
       <ul className="session-errors-ul">

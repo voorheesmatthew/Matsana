@@ -16,7 +16,6 @@ class HomePage extends React.Component {
   }
 
   renderProjects() {
-    // debugger;
     let projects = Object.values(this.props.projects)
     return(
       <ul className="home-projects-ul">

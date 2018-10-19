@@ -47,7 +47,7 @@ end
 gem 'pry-rails'
 gem 'bcrypt'
 gem 'jquery-rails'
-gem 'seed_dump'
+# gem 'seed_dump'
 
 
 group :development do

@@ -38,7 +38,3 @@ class SplashPage extends React.Component {
 }
 
 export default withRouter(SplashPage)
-
-// gem 'activerecord-import' ~> 0.4
-// gem 'factory_bot' ~> 4.8.2
-// gem 'jeweler' ~> 2.0

@@ -117,5 +117,3 @@ class Project extends React.Component {
 }
 
 export default withRouter(Project)
-
-// props.projects[parseInt(this.props.match.params.project)].project_name

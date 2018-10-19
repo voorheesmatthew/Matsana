@@ -23,8 +23,8 @@ document.addEventListener('DOMContentLoaded',()=>{
     store = configureStore();
   }
   // //Testing
-  window.getState = store.getState;
-  window.dispatch = store.dispatch;
+  // window.getState = store.getState;
+  // window.dispatch = store.dispatch;
   // //Testing
 
   const root = document.getElementById('root')

@@ -6,7 +6,6 @@ import { closeModal } from '../../../actions/modal_actions';
 import UpdateProjectForm from './update_project_form';
 
 const mapStateToProps = ({session, entities: { users, teams, projects }}) => {
-  // debugger
   return {
     currentUser: users[session.userId],
     currentTeamId: session.currentTeamId,

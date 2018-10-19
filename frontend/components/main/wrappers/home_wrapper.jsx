@@ -13,7 +13,6 @@ class HomeWrapper extends React.Component {
   }
 
   componentWillMount() {
-    // debugger
     this.props.fetchTeams(this.props.currentUser),
     this.props.fetchTasks(this.props.currentUser.id, this.props.currentTeamId),
     this.props.fetchProjects(this.props.currentTeamId)

@@ -15,7 +15,6 @@ const teamsReducer = (oldState = {}, action) => {
     case RECEIVE_TEAM:
       return merge({}, oldState, {[action.team.id]: action.team});
     case RECEIVE_CURRENT_USER:
-    // TODO: bug here or in sessionReducer
       return merge({}, oldState, {[action.currentTeam.id]: action.currentTeam});
     case REMOVE_TEAM:
       const newState = merge({}, oldState);

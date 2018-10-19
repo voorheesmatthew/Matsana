@@ -1,5 +1,4 @@
 /*jshint esversion: 6 */
-// This comes verbatim from benchbnb project(or most other apps with frontend user auth)
 import * as APIUtil from '../util/session_api_util';
 
 import * as TeamAPIUtil from '../util/team_api_util';

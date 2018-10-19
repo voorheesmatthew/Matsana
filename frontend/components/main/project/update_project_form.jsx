@@ -5,7 +5,6 @@ import { Link, Redirect } from 'react-router-dom';
 class UpdateProjectForm extends React.Component {
   constructor(props) {
     super(props)
-    // debugger
     this.state = {
       id: parseInt(this.props.location.pathname.slice(1)),
       project_name: "",
@@ -15,7 +14,6 @@ class UpdateProjectForm extends React.Component {
   }
 
   componentDidMount() {
-    // debugger
     this.setState({
       project_name: this.props.projects[this.state.id].project_name
     })
@@ -30,9 +28,7 @@ class UpdateProjectForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    // debugger
     const project = Object.assign({}, this.state);
-    // debugger
     this.props.processForm(project).then(this.props.closeModal());
   }
 

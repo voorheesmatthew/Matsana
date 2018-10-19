@@ -8,7 +8,6 @@ import { requestProjects } from '../../../actions/project_actions';
 import NavBar from './nav_bar';
 
 const mapStateToProps = (state, ownProps) => {
-  // debugger
   return {
     currentUser: state.entities.users[state.session.userId],
     currentTeamId: state.session.currentTeamId,
@@ -26,4 +25,3 @@ export default withRouter(connect(
   mapStateToProps,
   mapDispatchToProps
 )(NavBar));
-// { session, entities: { users, teams, projects } }

@@ -19,7 +19,6 @@ class ProjectWrapper extends React.Component {
   }
 
   render() {
-    // debugger
     return (
       <div className="main-outer">
         <div id="left" className="column">
