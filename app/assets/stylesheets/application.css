@@ -41,8 +41,3 @@ button:focus {outline:0;}
 #right {
   width: 100%;
 }
-
-#left {
-    /* flex-shrink: 0; */
-    /* height: -webkit-fill-available; */
-}
