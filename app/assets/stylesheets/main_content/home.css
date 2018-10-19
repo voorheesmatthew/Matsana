@@ -18,10 +18,13 @@
   display: inline-grid;
   width: 100%;
 }
+.home-new-project {
+  border-style: dashed;
+  border-width: medium;
+  color: lightgrey;
+}
 
 .home-projects-ul li {
-  background-color: pink;
-  /* border: 1px solid red; */
   margin: 20px;
   font-size: 2vmin;
   text-align: center;
@@ -39,7 +42,7 @@
 
 .home-projects-ul li button {
   text-decoration: none;
-  color: black;
+  color: lightgrey;
   border: 0;
   background: none;
   box-shadow: none;
@@ -49,7 +52,8 @@
 }
 .home-projects-ul li button:hover {
   cursor: pointer;
-  color: white;
+  content: "+";
+  z-index: 30;
 }
 
 

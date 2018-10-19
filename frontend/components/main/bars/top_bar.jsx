@@ -50,7 +50,7 @@ class TopBar extends React.Component {
       return (
         <div className="top-bar-left">
           <div className="top_bar-title">
-            Home or Tasks
+            {this.props.match.path === "/home" ? "Home" : "Tasks"}
           </div>
         </div>
       );

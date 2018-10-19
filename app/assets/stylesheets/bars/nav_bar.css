@@ -13,7 +13,7 @@
 .nav-bar-contents {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: 100vh;
   /* padding: 20px; */
 }
 .nav-sections div a {
@@ -21,11 +21,31 @@
   color: white;
   display: inline-block;
   width: 100%;
-  padding-left: 20px;
+  padding-left: 30px;
   font-size: 14px;
+  position: relative;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+.home-icon {
+  height: 20px;
+  z-index: 20;
+  margin-top: 5px;
+  margin-left: 5px;
+  position: absolute;
+  float: left;
+}
+.task-icon {
+  height: 20px;
+  z-index: 20;
+  margin-top: 5px;
+  margin-left: 5px;
+  position: absolute;
+  float: left;
+  opacity: .5;
 }
 .nav-sections div a:hover {
-  background-color: #3b404a;
+  background-color: #3c404b80;
 }
 .nav-projects-ul li {
   display: flex;
@@ -48,9 +68,15 @@
   background-color: #3c404b80;
 }
 
+
+
 .nav-projects ul {
   list-style-type: none;
   padding: 10px;
+}
+
+.nav-projects ul div {
+  margin-bottom: 10px;
 }
 
 .nav-projects ul li::before {
@@ -69,6 +95,12 @@
 
 
 .nav-footer {
-  text-align: center;
-  flex-shrink: 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  margin-left: 30px;
+}
+.nav-footer a:hover img {
+  background-color: #3c404b;
+  border-radius: 4px;
 }

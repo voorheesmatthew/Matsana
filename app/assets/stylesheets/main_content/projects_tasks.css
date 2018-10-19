@@ -6,11 +6,12 @@
   padding-left: 15px;
   padding-right: 15px;
   height: 100%;
+  border-top: 1px solid #80808042;
 }
 
 .proj-tasks-container {
   background: white;
-  box-shadow: #888888;
+  border: 1px solid #80808042;
   height: 100%;
   padding-top: 3px;
 }

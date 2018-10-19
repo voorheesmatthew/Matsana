@@ -1,6 +1,8 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+// import logo from '../../../app/assets/images/animate-test-01sideflip.gif';
+
 
 
 class SessionForm extends React.Component {
@@ -13,6 +15,7 @@ class SessionForm extends React.Component {
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.guestUserLogin = this.guestUserLogin.bind(this);
+    this.showLoadingPage = this.showLoadingPage.bind(this);
   }
 
   componentDidMount() {
@@ -25,10 +28,17 @@ class SessionForm extends React.Component {
     });
   }
 
+  showLoadingPage() {
+    this.props.history.push(`/loading`)
+  }
+
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
-    this.props.processForm(user);
+    this.showLoadingPage();
+    setTimeout(() => {
+      this.props.processForm(user);
+    }, 3500);
   }
 
   renderErrors() {
@@ -68,7 +78,9 @@ class SessionForm extends React.Component {
     return (
       <div>
       <div className="session-outer">
-        <div className="session-header"><Link to="/" className="session-header">matsana</Link></div>
+        <div className="session-header">
+          <Link to="/" className="session-header">matsana</Link></div>
+          <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/f1055231234507.564a1d234bfb6.gif" className="session-logo"></img>
         <div className="session-form-container">
           <div className="session-form-content">
             <div className="session-form-elements">

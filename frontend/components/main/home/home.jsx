@@ -29,7 +29,7 @@ class HomePage extends React.Component {
 
           </li>
         ))}
-        <li>{this.props.newProjectButton}</li>
+        <li className="home-new-project">{this.props.newProjectButton}</li>
       </ul>
     );
   }

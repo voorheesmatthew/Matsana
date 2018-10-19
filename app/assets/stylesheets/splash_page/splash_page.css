@@ -52,6 +52,14 @@
   text-align: center;
 }
 
+.splash-gif {
+  margin-top: 100px;
+  width: 600px;
+  margin-bottom: 100px;
+  box-shadow: 1px, 1px;
+  box-shadow: -1px -2px 16px 0px rgba(199,199,199,1);
+}
+
 .splash-body-title {
   font-size: 45px;
   font-weight: 200;

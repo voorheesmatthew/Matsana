@@ -25,8 +25,9 @@ class SplashPage extends React.Component {
               Make more time for the work that matters most
             </div>
             <div className="splash-body-desc">
-              Matsana helps you coordinate all the work your team does together. So everyone knows what needs to get done, who’s responsible for doing it, and when it’s due.
+              Matsana helps you organize all the tasks you need to manage for all your projects. Now everyone should know that you are better than them, and who’s more responsible.
             </div>
+            <img className="splash-gif" src="https://media.giphy.com/media/64aBxC40SJELpw4tyG/giphy.gif"></img>
           </div>
           <div className="splash-footer">
           </div>

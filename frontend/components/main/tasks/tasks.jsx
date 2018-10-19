@@ -8,7 +8,6 @@ class Tasks extends React.Component {
     this.state ={
       newTaskName: ""
     }
-    // this.filteredTasks = this.filteredTasks.bind(this);
     this.updateCreate = this.updateCreate.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
@@ -59,7 +58,7 @@ class Tasks extends React.Component {
   renderTasks() {
     let allTasks = Object.values(this.props.tasks)
     return(
-      <ul className="all-tasks-ul"> All the Tasks
+      <ul className="proj-tasks-ul">
         {allTasks.map((task, i) => (
           <li key={`task${i}`}>
             <input
@@ -68,6 +67,7 @@ class Tasks extends React.Component {
             onChange={this.updateStatus(task.id, 'complete')}>
             </input>
               <input
+                className="task-name"
                 type="text"
                 value={task.task_name}
                 onChange={this.update(task.id, 'task_name')}
@@ -76,8 +76,12 @@ class Tasks extends React.Component {
           </li>
         ))}
         <li>
-          <form onSubmit={this.handleSubmit}>
+          <form
+            className="new-task-form"
+            onSubmit={this.handleSubmit}>
             <input
+              className="new-task-input"
+              placeholder="New Task"
               type="text"
               value={this.state.newTaskName}
               onChange={this.updateCreate()}>
@@ -91,8 +95,10 @@ class Tasks extends React.Component {
 
   render() {
     return (
-      <div>All the tasks!!!!
-        {this.renderTasks()}
+      <div className="proj-tasks-outer">
+        <div className="proj-tasks-container">
+          {this.renderTasks()}
+        </div>
       </div>
     );
   }
