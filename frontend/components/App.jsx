@@ -25,7 +25,7 @@ const App = () => (
       <ProtectedRoute exact path="/tasks" component={TasksWrapperContainer}/>
       <ProtectedRoute exact path="/:project" component={ProjectWrapperContainer}/>
 
-      <Redirect to="/"/>
+      <Redirect to="/login"/>
     </Switch>
   </div>
 );
