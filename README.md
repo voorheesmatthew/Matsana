@@ -63,7 +63,6 @@ Tasks are created, updated, and destroyed without the use of a pesky mouse (Tab,
                 onChange={this.update(task.id, 'task_name')}
                 onKeyDown={this.handleKeyDown(task.id)}>
               </input>
-          </li>
 ```
 
 ### Add spice to your day with pastel colors
