@@ -42,10 +42,13 @@ group :development, :test do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'annotate'
+
 end
 gem 'pry-rails'
 gem 'bcrypt'
 gem 'jquery-rails'
+gem 'seed_dump'
+
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
