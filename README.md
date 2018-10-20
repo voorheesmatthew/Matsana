@@ -1,24 +1,24 @@
-# [Matsana](https://matsana.herokuapp.com/#/)
+# [Matsana](https://matsana.io)
 ## Matthew Voorhees First Fullstack Project 2018
 ### (Asana Clone, built in 10 days)
 
 ![Alt Text](https://media.giphy.com/media/fs0pERRzdpwxclGGiw/giphy.gif)
 
 ## Description
-[Matsana](https://matsana.herokuapp.com/#/) is a no-nonsense approach to project management. You can log in with a demo account to take a tour of what it's like in the life of Matt Voorhees, or you can create your own account to manage unlimited projects and tasks associated with those projects. You can get a high-level view of your responsibilities and add tasks free from the restraints of being associated with a project.
+[Matsana](https://matsana.io) is a no-nonsense approach to project management. You can log in with a demo account to take a tour of what it's like in the life of Matt Voorhees, or you can create your own account to manage unlimited projects and tasks associated with those projects. You can get a high-level view of your responsibilities and add tasks free from the restraints of being associated with a project.
 
 ### Live Version:
-[Matsana](https://matsana.herokuapp.com/#/)
+[Matsana](https://matsana.io)
 
 ## Technologies
 
-[Matsana](https://matsana.herokuapp.com/#/) was built on Rails using a PostgreSQL database, AJax, Ruby on the backend, and React on the frontend.  A healthy dose of blood, sweat, and tears. CSS3 for styling.
+[Matsana](https://matsana.io) was built on Rails using a PostgreSQL database, AJax, Ruby on the backend, and React on the frontend.  A healthy dose of blood, sweat, and tears. CSS3 for styling.
 
 ## Key Features
 
 ### Live updates and mouseless navigation
 
-Tasks are created, updated, and destroyed without the use of a pesky mouse (Tab, Enter, and Delete are all you need in life and [Matsana](https://matsana.herokuapp.com/#/) Tasks). Tasks are updated in real-time, instantaneously, so there's no need to save your work, really.
+Tasks are created, updated, and destroyed without the use of a pesky mouse (Tab, Enter, and Delete are all you need in life and [Matsana](https://matsana.io) Tasks). Tasks are updated in real-time, instantaneously, so there's no need to save your work, really.
 
 ![Alt Text](https://media.giphy.com/media/2yzIm1xDfsEXCa7rPv/giphy.gif)
 
