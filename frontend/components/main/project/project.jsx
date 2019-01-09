@@ -20,8 +20,13 @@ class Project extends React.Component {
 
   update(taskId, field) {
     return e => {
-      let task = {id: taskId, [field]: e.currentTarget.value}
-      this.props.updateTask(task);
+      let task = { id: taskId, [field]: e.currentTarget.value }
+      setTimeout(() => {
+        if (task.task_name === document.getElementById(task.id).value) {
+          this.props.updateTask(task);
+          console.log("Updated");
+        }
+      }, 1000)
     }
   }
 
@@ -73,7 +78,8 @@ class Project extends React.Component {
               <input
                 className="task-name"
                 type="text"
-                value={task.task_name}
+                defaultValue={task.task_name}
+                id={task.id}
                 onChange={this.update(task.id, 'task_name')}
                 onKeyDown={this.handleKeyDown(task.id)}>
               </input>
