@@ -27,7 +27,7 @@ class SplashPage extends React.Component {
             <div className="splash-body-desc">
               Matsana helps you organize all the tasks you need to manage for all your projects. Now everyone should know that you are better than them, and who’s more responsible.
             </div>
-            <img className="splash-gif" src="https://media.giphy.com/media/64aBxC40SJELpw4tyG/giphy.gif"></img>
+            <img className="splash-gif" src="https://media.giphy.com/media/IgGEUyl1wfhptgwqe8/source.gif"></img>
           </div>
           <div className="splash-footer">
           </div>
