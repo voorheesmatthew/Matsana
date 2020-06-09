@@ -2,7 +2,7 @@
 ## Matthew Voorhees First Fullstack Project 2018
 ### (Asana Clone, built in 10 days)
 
-![Alt Text](https://media.giphy.com/media/fs0pERRzdpwxclGGiw/giphy.gif)
+![Alt Text](https://media.giphy.com/media/IgGEUyl1wfhptgwqe8/source.gif)
 
 ## Description
 [Matsana](https://matsana.io) is a no-nonsense approach to project management. You can log in with a demo account to take a tour of what it's like in the life of Matt Voorhees, or you can create your own account to manage unlimited projects and tasks associated with those projects. You can get a high-level view of your responsibilities and add tasks free from the restraints of being associated with a project.
@@ -19,8 +19,6 @@
 ### Live updates and mouseless navigation
 
 Tasks are created, updated, and destroyed without the use of a pesky mouse (Tab, Enter, and Delete are all you need in life and [Matsana](https://matsana.io) Tasks). Tasks are updated in real-time, instantaneously, so there's no need to save your work, really.
-
-![Alt Text](https://media.giphy.com/media/2yzIm1xDfsEXCa7rPv/giphy.gif)
 
 ```js
   update(taskId, field) {
